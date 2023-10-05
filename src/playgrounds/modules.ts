@@ -1,47 +1,45 @@
+// @ts-nocheck
+
 // Anonymous closure.
 (() => {
-  const variableInsideTheClosure =
-    "We keep these variables private inside this closure scope";
+	const variableInsideTheClosure = 'We keep these variables private inside this closure scope';
 
-  console.log(variableInsideTheClosure);
+	console.log(variableInsideTheClosure);
 })();
 
 // Closure with import from "outside"
 ((globalVariable) => {
-  const variableInsideTheClosure =
-    "We keep these variables private inside this closure scope";
+	const variableInsideTheClosure = 'We keep these variables private inside this closure scope';
 
-  // Do something with the given global variable
-  const sum = 1 + globalVariable;
+	// Do something with the given global variable
+	const sum = 1 + globalVariable;
 
-  console.log(variableInsideTheClosure);
-  console.log(sum);
+	console.log(variableInsideTheClosure);
+	console.log(sum);
 })(/*globalVariable*/ 4711);
 
 // An Object-Interface
 const myModule = (() => {
-  const variableInsideTheClosure =
-    "We expose these variables outside this closure scope";
+	const variableInsideTheClosure = 'We expose these variables outside this closure scope';
 
-  // Expose these functions via an interface while hiding
-  // the implementation of the module within the function() block
+	// Expose these functions via an interface while hiding
+	// the implementation of the module within the function() block
 
-  return {
-    exposeValue: variableInsideTheClosure
-  };
+	return {
+		exposeValue: variableInsideTheClosure,
+	};
 })();
 console.log(myModule.exposeValue);
 
 /* CommonJS */
 function myModule2() {
-  const variableInsideTheClosure =
-    "We keep these variables private inside this closure scope";
+	const variableInsideTheClosure = 'We keep these variables private inside this closure scope';
 
-  this.exposeValue = "We expose these variables outside this closure scope";
+	this.exposeValue = 'We expose these variables outside this closure scope';
 
-  this.exposeFunction = function () {
-    return variableInsideTheClosure;
-  };
+	this.exposeFunction = function () {
+		return variableInsideTheClosure;
+	};
 }
 
 module.exports = myModule2;

@@ -1,3 +1,4 @@
+// @ts-nocheck
 console.log('---[Functions|Start]---');
 
 function functionDeclaration() {}
@@ -12,14 +13,14 @@ let arrowFunctionWithImplicitReturn = () => 'return stuff';
 
 // Function as object
 function Bla() {
-  this.foo = 'bar';
-  this.getInitialProps = () => {
-    return { value: 'Implementation at the instance' };
-  };
+	this.foo = 'bar';
+	this.getInitialProps = () => {
+		return { value: 'Implementation at the instance' };
+	};
 }
 
 Bla.getInitialProps = () => {
-  return { value: "Implementation at 'class' (static)" };
+	return { value: "Implementation at 'class' (static)" };
 };
 
 const newInstance = new Bla();
