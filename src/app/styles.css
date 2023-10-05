@@ -1,0 +1,96 @@
+html {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App h1 {
+  color: #862f4b;
+  text-shadow: 3px 3px lightgray;
+  margin: 0;
+  align-self: center;
+  font-size: 1.75rem;
+}
+
+.App h2 {
+  color: #cac8cb;
+  line-height: 1rem;
+  align-self: center;
+  font-size: 1.25rem;
+}
+
+nav {
+  margin-bottom: 1rem;
+  align-self: center;
+  display: flex;
+}
+
+nav div {
+  color: #862f4b;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+nav div:hover {
+  background-color: rgba(202, 200, 203, 0.3);
+}
+
+.Outlet pre {
+  display: 'inline-block';
+  line-height: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  text-decoration: underline;
+}
+
+.Outlet h2 {
+  color: #cac8cb;
+  font-size: 0.95rem;
+}
+
+.Outlet section div:nth-child(odd) {
+  background-color: aliceblue;
+}
+
+.Outlet section header {
+  margin: 0 10px;
+  padding: 0;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: green;
+  background-color: greenyellow;
+}
+
+.Outlet code {
+  font-family: monospace;
+  font-size: 0.75rem;
+  margin: 10px;
+  display: block;
+}
+
+.Overview {
+  list-style: none;
+  line-height: 1.5rem;
+}
+
+.Overview a:link,
+.Overview a:visited,
+.Overview a:hover,
+.Overview a:active {
+  color: #862f4b;
+  text-decoration: none;
+}
+
+.Overview a:hover {
+  font-size: 1.1rem;
+  background-color: rgba(202, 200, 203, 0.3);
+}

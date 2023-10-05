@@ -1,0 +1,17 @@
+table {
+  border: 1px solid;
+  text-align: center;
+}
+
+th {
+  background-color: lightgray;
+  width: 150px;
+}
+
+th:not(:first-child) {
+  border-left: 1px solid;
+}
+
+td:not(:first-child) {
+  border-left: 1px solid;
+}
