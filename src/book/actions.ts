@@ -1,4 +1,4 @@
-import { Book, Action, ThunkAction } from '../interfaces';
+import { Action, Book, ThunkAction } from '../interfaces';
 
 const BOOKS_URL = 'http://localhost:4730/books';
 
@@ -7,15 +7,15 @@ export const FETCH_BOOK_LIST_SUCCESS = 'FETCH_BOOK_LIST_SUCCESS';
 export const FETCH_BOOK_LIST_ERROR = 'FETCH_BOOK_LIST_ERROR';
 
 export const fetchBookListPending = (): Action => {
-  return { type: FETCH_BOOK_LIST_PENDING };
+	return { type: FETCH_BOOK_LIST_PENDING };
 };
 
 export const fetchBookListSuccess = (books: ReadonlyArray<Book>): Action => {
-  return { type: FETCH_BOOK_LIST_SUCCESS, books };
+	return { type: FETCH_BOOK_LIST_SUCCESS, books };
 };
 
 export const fetchBookListError = (error: string): Action => {
-  return { type: FETCH_BOOK_LIST_ERROR, payload: error };
+	return { type: FETCH_BOOK_LIST_ERROR, payload: error };
 };
 
 /*
@@ -26,47 +26,47 @@ export const fetchBookListError = (error: string): Action => {
 */
 
 export const fetchBookList = (): ThunkAction => {
-  return async (dispatch: any) => {
-    console.log('[Redux] Start fetching books.');
-    dispatch(fetchBookListPending());
+	return async (dispatch: any) => {
+		console.log('[Redux] Start fetching books.');
+		dispatch(fetchBookListPending());
 
-    try {
-      console.log('[Redux] Fetching books from the API.');
+		try {
+			console.log('[Redux] Fetching books from the API.');
 
-      const response = await fetch(BOOKS_URL);
-      const books = await response.json();
+			const response = await fetch(BOOKS_URL);
+			const books = await response.json();
 
-      console.log('[Redux] Successfully fetched books.');
-      // dispatch(fetchBookListSuccess(books));
-      setTimeout(() => {
-        dispatch(fetchBookListSuccess(books));
-      }, 3000);
-    } catch (error) {
-      console.log('[Redux] Error while fetching books.', error);
-      dispatch(fetchBookListError(error.toString()));
-    }
-  };
+			console.log('[Redux] Successfully fetched books.');
+			// dispatch(fetchBookListSuccess(books));
+			setTimeout(() => {
+				dispatch(fetchBookListSuccess(books));
+			}, 3000);
+		} catch (error) {
+			console.log('[Redux] Error while fetching books.', error);
+			dispatch(fetchBookListError((error as Error).toString()));
+		}
+	};
 };
 
 export const deleteBookAction = (isbn: number): Action => ({
-  type: 'DELETE_BOOK',
-  payload: isbn
+	type: 'DELETE_BOOK',
+	payload: isbn,
 });
 
 export const addBook = (book: any, createTime: any, userName: any): Action => {
-  return {
-    type: 'ADD_BOOK',
-    book: {
-      ...book,
-      createDate: createTime,
-      modifyDate: createTime,
-      user: {
-        name: userName
-      }
-    }
-  };
+	return {
+		type: 'ADD_BOOK',
+		book: {
+			...book,
+			createDate: createTime,
+			modifyDate: createTime,
+			user: {
+				name: userName,
+			},
+		},
+	};
 };
 
 export const createAddDummyAction = (): Action => ({
-  type: 'ADD_DUMMY'
+	type: 'ADD_DUMMY',
 });
