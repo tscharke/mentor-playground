@@ -1,36 +1,86 @@
+import { Action, Tasks } from './interfaces';
 import { reducer } from './reducer';
-import { Tasks, Action } from './interfaces';
 
 describe('useReducer', () => {
-  let initialState: Tasks;
+	it('returns the initial state if no responsible action is available', () => {
+		const state: Tasks = [
+			{
+				id: 1,
+				label: '1. Task',
+				progress: 'open',
+				availableProgresses: ['work'],
+			},
+		];
+		const action = { type: 'UNKNOWN_ACTION' } as unknown as Action;
+		expect(reducer(state, action)).toEqual(state);
+	});
 
-  it('returns the initial state if no responsible action is available', () => {
-    const action = ({ type: 'UNKNOWN_ACTION' } as unknown) as Action;
+	it('dispatches OPEN and returns a state without changing the progress', () => {
+		const state: Tasks = [
+			{
+				id: 1,
+				label: '1. Task',
+				progress: 'open',
+				availableProgresses: ['work'],
+			},
+		];
+		expect(reducer(state, { type: 'OPEN', id: 1 })).toEqual(state);
+	});
 
-    const state = reducer(initialState, action);
-    expect(state).toEqual(initialState);
-  });
+	it('dispatches OPEN and returns a state with progress "open" and "done"', () => {
+		const state: Tasks = [
+			{
+				id: 1,
+				label: '1. Task',
+				progress: 'work',
+				availableProgresses: ['open', 'done'],
+			},
+		];
+		expect(reducer(state, { type: 'OPEN', id: 1 })).toEqual([
+			{
+				id: 1,
+				label: '1. Task',
+				progress: 'open',
+				availableProgresses: ['work'],
+			},
+		]);
+	});
 
-  beforeEach(() => {
-    initialState = [
-      {
-        id: 1,
-        label: '1. Task',
-        progress: 'open',
-        availableProgresses: ['work']
-      },
-      {
-        id: 2,
-        label: '2. Task',
-        progress: 'work',
-        availableProgresses: ['open', 'done']
-      },
-      {
-        id: 3,
-        label: '3. Task',
-        progress: 'done',
-        availableProgresses: ['open']
-      }
-    ];
-  });
+	it('dispatches IN_PROGRESS and returns a state with progress "open" and "done"', () => {
+		const state: Tasks = [
+			{
+				id: 1,
+				label: '1. Task',
+				progress: 'open',
+				availableProgresses: ['open', 'done'],
+			},
+		];
+		expect(reducer(state, { type: 'IN_PROGRESS', id: 1 })).toEqual([
+			{
+				id: 1,
+				label: '1. Task',
+				progress: 'work',
+				availableProgresses: ['open', 'done'],
+			},
+		]);
+	});
+
+	it('dispatches DONE and returns a state with progress "open"', () => {
+		const state: Tasks = [
+			{
+				id: 1,
+				label: '1. Task',
+				progress: 'work',
+				availableProgresses: ['open', 'done'],
+			},
+		];
+		expect(reducer(state, { type: 'DONE', id: 1 })).toEqual([
+			{
+				id: 1,
+				label: '1. Task',
+				progress: 'done',
+				availableProgresses: ['open'],
+			},
+		]);
+	});
 });
