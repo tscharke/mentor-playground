@@ -51,4 +51,5 @@ pnpm run start
 
 ## 🤝 You would like to contribute?
 
-tbd 🤷‍
+I love if you want to contribute to this project.
+To do so, please follow the steps described [here](CONTRIBUTING.md) - thank you very much ❤️🙏
