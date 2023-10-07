@@ -53,17 +53,23 @@ pnpm install
 pnpm run start
 ```
 
-## 👀 What will you find?
+## 👀 What to find
 
-| Name                                                                        | Folder                  | Description |
-|-----------------------------------------------------------------------------|-------------------------|-------------|
-| _(Simple)_&nbsp;Components                                                  | `/src/simpleComponents` |             |
-| Hooks                                                                       | `/src/hooks`            |             |
-| Styled Components                                                           | `/src/style`         |             |
-| Forms                                                                       | `/src/forms`            |             |
-| Errors                                                                      | `/src/errorHandling`    |             |
-| Suspense                                                                    | `/src/suspense`         |             |
-| Book App ([Bookmonkey API](https://github.com/workshops-de/bookmonkey-api)) | `/src/book`             |             |
+- _(Simple)_&nbsp;Components 👉[`src/simpleComponents`](./src/simpleComponents)
+- Hooks 👉 [`src/hooks`](./src/hooks)
+  - useState
+  - useEffect
+  - [userReducer](./src/hooks/useReducer/UseReducer.md) 👉 [`src/hooks/useReducer`](./src/hooks/useReducer)
+  - useContext
+  - useFetchDataFromAPI (a Custom-Hook)
+  - useRef
+  - useMemo
+  - useCallback
+- Styled Components 👉 [`/src/style`](./src/style)
+- Forms 👉 [`/src/forms`](./src/forms)
+- Errors 👉 [`/src/errorHandling`](./src/errorHandling)
+- Suspense 👉 [`/src/errorHandling`](./src/suspense)
+- Book App ([Bookmonkey API](https://github.com/workshops-de/bookmonkey-api)) 👉 [`/src/book`](./src/book)
 
 ## 🤝 You would like to contribute?
 
