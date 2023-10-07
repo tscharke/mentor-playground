@@ -53,6 +53,8 @@ pnpm install
 pnpm run start
 ```
 
+If everything works up to here 👏, then the development-server has started, and you can browse the application under [http://localhost:3000](http://localhost:3000).
+
 ## 👀 What to find
 
 - _(Simple)_&nbsp;Components 👉[`src/simpleComponents`](./src/simpleComponents)
