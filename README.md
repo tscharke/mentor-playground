@@ -21,8 +21,24 @@ In other words: **Always have your developer tools open** 😁
 
 ## 🚀 Mission
 
-The idea, or better vision, is to eventually provide all snippets with verbose and spoken
-tests that are so self-explanatory that no further comments on the code (or console) are needed.
+The idea, or better my vision, with this repository is to make code snippets available in a format of components, tests,
+(utility) functions, etc. available. All code should show detailed concepts, approach and ideas in handling and using React
+with TypeScript.
+
+Thereby, the comprehensibility and self-explanation within the code is in the foreground. It will make it possible, even for
+beginners, to find inspiration. It's important to note that I am showing some ways and approaches here. There is generally not
+one right  or one wrong way (apart from "real" mistakes 😉).
+
+At the moment, it shows mostly my approaches that I see in my daily work and in training and mentoring. I.e., if the respective
+concept/idea is understood, I would encourage each of you to use your own style and writing in the implementation. So be sure to
+look at other people's implementations, adopt (parts of) their style, use styles you have established as a team, and so on.
+
+This repository is a start and should grow 💪.
+
+Feel free to post your ideas or questions in the form of issues. Often a single sentence is enough (e.g., the title of an issue).
+
+Of course, I'm als happy about any pull request (PR) that adds concepts, corrects errors, simplifies things or describes things
+better - whatever comes to your mind 🥳. The steps to follow to contribute to this project you can find [here](CONTRIBUTING.md).
 
 ## 💻 Setup (on your machine)
 
