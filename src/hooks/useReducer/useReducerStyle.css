@@ -5,7 +5,7 @@ table {
 
 th {
   background-color: lightgray;
-  width: 150px;
+  width: 200px;
 }
 
 th:not(:first-child) {
