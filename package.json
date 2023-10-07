@@ -1,9 +1,10 @@
 {
-  "name": "react-workshop-demo",
+  "name": "mentor-playground",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
+  "license": "MIT",
   "dependencies": {
     "@emotion/css": "11.11.2",
     "@testing-library/react": "14.0.0",
