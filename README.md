@@ -15,8 +15,8 @@ and not on a fancy UI/UX with enterprise-relevant features 😉
 Therefore, it is essential to look at the output on the `console` along with the code.
 In other words: **Always have your developer tools open** 😁
 
-| 🚧 Please be aware…                                                                                                                                 |
-|:----------------------------------------------------------------------------------------------------------------------------------------------------|
+| 🚧 Please be aware…                                                                                                                                |
+| :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | That everything in this repository is a _work in progress_ and is constantly changing and improving. Therefore, there is never a finished version. |
 
 ## 🚀 Mission
@@ -27,7 +27,7 @@ with TypeScript.
 
 Thereby, the comprehensibility and self-explanation within the code is in the foreground. It will make it possible, even for
 beginners, to find inspiration. It's important to note that I am showing some ways and approaches here. There is generally not
-one right  or one wrong way (apart from "real" mistakes 😉).
+one right or one wrong way (apart from "real" mistakes 😉).
 
 At the moment, it shows mostly my approaches that I see in my daily work and in training and mentoring. I.e., if the respective
 concept/idea is understood, I would encourage each of you to use your own style and writing in the implementation. So be sure to
@@ -47,7 +47,7 @@ better - whatever comes to your mind 🥳. The steps to follow to contribute to 
 git clone git@github.com:tscharke/mentor-playground.git && cd "$(basename "$_" .git)"
 
 # Install all dependencies
-pnpm install 
+pnpm install
 
 # Run development-server
 pnpm run start
@@ -57,21 +57,23 @@ If everything works up to here 👏, then the development-server has started, an
 
 ## 👀 What to find
 
-- _(Simple)_&nbsp;Components 👉[`src/simpleComponents`](./src/simpleComponents)
-- Hooks 👉 [`src/hooks`](./src/hooks)
-  - useState
-  - useEffect
-  - [userReducer](./src/hooks/useReducer/UseReducer.md) 👉 [`src/hooks/useReducer`](./src/hooks/useReducer)
-  - useContext
-  - useFetchDataFromAPI (a Custom-Hook)
-  - useRef
-  - useMemo
-  - useCallback
-- Styled Components 👉 [`/src/style`](./src/style)
-- Forms 👉 [`/src/forms`](./src/forms)
-- Errors 👉 [`/src/errorHandling`](./src/errorHandling)
-- Suspense 👉 [`/src/errorHandling`](./src/suspense)
-- Book App ([Bookmonkey API](https://github.com/workshops-de/bookmonkey-api)) 👉 [`/src/book`](./src/book)
+| Thema                                                            | Verzeichnis                                        |
+| ---------------------------------------------------------------- | -------------------------------------------------- |
+| _(Simple)_ Components                                            | [`src/simpleComponents`](./src/simpleComponents)   |
+| Hooks                                                            | [`src/hooks`](./src/hooks)                         |
+|                                                                  | useState                                           |
+|                                                                  | useEffect                                          |
+|                                                                  | [useReducer](./src/hooks/useReducer/UseReducer.md) |
+|                                                                  | useContext                                         |
+|                                                                  | useFetchDataFromAPI (a Custom-Hook)                |
+|                                                                  | useRef                                             |
+|                                                                  | useMemo                                            |
+|                                                                  | useCallback                                        |
+| Styled Components                                                | [`/src/style`](./src/style)                        |
+| Forms                                                            | [`/src/forms`](./src/forms)                        |
+| Errors                                                           | [`/src/errorHandling`](./src/errorHandling)        |
+| Suspense                                                         | [`/src/suspense`](./src/suspense)                  |
+| [Bookmonkey API](https://github.com/workshops-de/bookmonkey-api) | [`/src/book`](./src/book)                          |
 
 ## 🤝 You would like to contribute?
 
