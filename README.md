@@ -57,23 +57,23 @@ If everything works up to here 👏, then the development-server has started, an
 
 ## 👀 What to find
 
-| Thema                                                            | Verzeichnis                                        |
-| ---------------------------------------------------------------- | -------------------------------------------------- |
-| _(Simple)_ Components                                            | [`src/simpleComponents`](./src/simpleComponents)   |
-| Hooks                                                            | [`src/hooks`](./src/hooks)                         |
-|                                                                  | useState                                           |
-|                                                                  | useEffect                                          |
-|                                                                  | [useReducer](./src/hooks/useReducer/UseReducer.md) |
-|                                                                  | useContext                                         |
-|                                                                  | useFetchDataFromAPI (a Custom-Hook)                |
-|                                                                  | useRef                                             |
-|                                                                  | useMemo                                            |
-|                                                                  | useCallback                                        |
-| Styled Components                                                | [`/src/style`](./src/style)                        |
-| Forms                                                            | [`/src/forms`](./src/forms)                        |
-| Errors                                                           | [`/src/errorHandling`](./src/errorHandling)        |
-| Suspense                                                         | [`/src/suspense`](./src/suspense)                  |
-| [Bookmonkey API](https://github.com/workshops-de/bookmonkey-api) | [`/src/book`](./src/book)                          |
+| Thema                                                                                    | Verzeichnis                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _(Simple)_ Components                                                                    | [`src/simpleComponents`](./src/simpleComponents)                                                                                                                                                                                              |
+| Hooks…                                                                                   | [`src/hooks`](./src/hooks)                                                                                                                                                                                                                    |
+| <div style="margin-left: 10px;">useState</div>                                           | [`./src/hooks/UseState.tsx`](./src/hooks/UseState.tsx)<br/> [`./src/hooks/ComponentWithState.tsx`](./src/hooks/ComponentWithState.tsx) <br/> [`./src/hooks/ComponentWithStateAndChildren.tsx`](./src/hooks/ComponentWithStateAndChildren.tsx) |
+| <div style="margin-left: 10px;">useEffect</div>                                          | [`./src/hooks/ComponentUseEffectHook.tsx`](./src/hooks/ComponentUseEffectHook.tsx)                                                                                                                                                            |
+| <div style="margin-left: 10px;">[useReducer](./src/hooks/useReducer/UseReducer.md)</div> | [`./src/hooks/useReducer`](./src/hooks/useReducer)                                                                                                                                                                                            |
+| <div style="margin-left: 10px;">useContext</div>                                         | [`./src/hooks/UseContext1.tsx`](./src/hooks/UseContext1.tsx) <br/>[`./src/hooks/UseContext2.tsx`](./src/hooks/UseContext2.tsx)<br/>[`./src/hooks/UseContext3.tsx`](./src/hooks/UseContext2.tsx)                                               |
+| <div style="margin-left: 10px;">useFetchDataFromAPI (a Custom-Hook)</div>                | [`./src/hooks/CustomHook.tsx`](./src/hooks/CustomHook.tsx)                                                                                                                                                                                    |
+| <div style="margin-left: 10px;">useRef</div>                                             | [`./src/hooks/UseRefHook.tsx`](./src/hooks/UseRefHook.tsx)                                                                                                                                                                                    |
+| <div style="margin-left: 10px;">useMemo</div>                                            | [`./src/hooks/UseMemo.tsx`](./src/hooks/UseMemo.tsx)                                                                                                                                                                                          |
+| <div style="margin-left: 10px;">useCallback</div>                                        | [`./src/hooks/UseCallback.tsx`](./src/hooks/UseCallback.tsx)                                                                                                                                                                                  |
+| Styled Components                                                                        | [`/src/style`](./src/style)                                                                                                                                                                                                                   |
+| Forms                                                                                    | [`/src/forms`](./src/forms)                                                                                                                                                                                                                   |
+| Errors                                                                                   | [`/src/errorHandling`](./src/errorHandling)                                                                                                                                                                                                   |
+| Suspense                                                                                 | [`/src/suspense`](./src/suspense)                                                                                                                                                                                                             |
+| [Bookmonkey API](https://github.com/workshops-de/bookmonkey-api)                         | [`/src/book`](./src/book)                                                                                                                                                                                                                     |
 
 ## 🤝 You would like to contribute?
 
