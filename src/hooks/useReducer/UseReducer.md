@@ -1,6 +1,6 @@
 # useReducer-Hook
 
-By using a list of tasks I explain the `useReducer` hook.
+By using a list of tasks I explain the `useReducer` React-Hook.
 
 In this example, I start with a list of three tasks that are in the three different progresses:
 _Open_, _In progress_ or _Done_.
@@ -18,7 +18,7 @@ To make the application look a bit more "realistic," following pattern can chang
 - A task in progress "In progress" can be set to progress "Open" or progress "Done".
 - A task in progress "Done" can only be set to progress "Open".
 
-To give the component itself a bit of "UI logic", I've decided to build a simple function that, based on
+To give the component itself a bit of "UI logic", I've decided to build a plain function that, based on
 the current progress of a task, displays the further possible switching-progress according to the above
 logic. With this, it is possible to activate or deactivate the buttons to change the progress of a task.
 
@@ -27,7 +27,7 @@ however, I've decided for an additional and independent function 😉
 
 ## Usage
 
-The hook comes with React and must therefore be (named) imported from this module (additionally) before it
+This hook comes with the React-Library and must therefore be (named) imported from this module (additionally) before it
 can be used.
 
 ```typescript
@@ -43,7 +43,7 @@ dispatch( { type: "FIRST_ACTION", payload: { foo: "bar" } } );
 …
 ```
 
-This hook also follows a pattern which is already known from the `useState` hook. It returns an array with
+The React-Hook also follows a pattern which is already known from the `useState` React-Hook. It returns an array with
 two values as a result.
 
 The first value of the result (`index[0]`) is the "state" produced by the [Reducer](#reducer) The second value of the
@@ -54,7 +54,7 @@ result (`index[1]`) returns a function, which is later used to send [Action](#ac
 The concept and the name **Action** are adapted from [Redux](https://redux.js.org), in fact it is even a concept
 from [Flux-Pattern](https://facebookarchive.github.io/flux).
 
-An _Action_ is a simple JavaScript-Object, often called PoJO (**P**lain **O**ld **J**avaScript **O**bject), which
+An _Action_ is a plain JavaScript-Object, often called PoJO (**P**lain **O**ld **J**avaScript **O**bject), which
 has at least the _Key_ `type` and beyond that can have further _keys_, which are called "payload".
 
 ### Definition of an Action
@@ -62,27 +62,27 @@ has at least the _Key_ `type` and beyond that can have further _keys_, which are
 ```typescript
 // Simplest varaint
 type Action = {
-  type: string;
-  // An Action can contain an optional error that a reducer should be able to handle.
-  // However, I've hardly seen this variant until today. We will not use it here.
-  error?: Error;
-}
+	type: string;
+	// An Action can contain an optional error that a reducer should be able to handle.
+	// However, I've hardly seen this variant until today. We will not use it here.
+	error?: Error;
+};
 
 // Varaint with seperate payload
 type Action = {
-  type: string;
-  // I use any here to describe what any kind of payload is possible and depends on your needs.
-  // Please specify the type specifically for you
-  payload: any; 
-}
+	type: string;
+	// I use any here to describe what any kind of payload is possible and depends on your needs.
+	// Please specify the type specifically for you
+	payload: any;
+};
 
 // Varaint with "inline" payload
 type Action = {
-  type: string;
-  // I use any here to describe what any kind of payload is possible and depends on your needs.
-  // Please specify the type specifically for you
-  [key: string]: any
-}
+	type: string;
+	// I use any here to describe what any kind of payload is possible and depends on your needs.
+	// Please specify the type specifically for you
+	[key: string]: any;
+};
 ```
 
 ## Reducer
@@ -92,19 +92,19 @@ A **Reducer** is a "normal" TypeScript function with exactly two parameters, whi
 - The 1st argument is the (current) state (`state`).
 - The 2nd argument is a function with which we send/dispatch _Actions_ (`dispatch`).
 
-| ☝️Important ☝️                                                                                                                                                                                                                      |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ☝️Important ☝️                                                                                                                                                                                                                    |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | The result of a _Reducer_ must be a **new** TypeScript object/array/primitiv for the component to be re-rendered. If the returned object/array/primitiv is the **same**, this will not result in a re-rendering of the component. |
 
 ### Definition of a Reducer
 
 ```typescript
-type reducer = (state: State, action: Action) => State
+type reducer = (state: State, action: Action) => State;
 ```
 
 ## What you will find in this folder
 
-- [The Component](UseReducerComponent.tsx) which uses the `useReduce`-Hook and displays the table with all Tasks and User-Actions.
+- [The Component](UseReducerComponent.tsx) which uses the React-Hook `useReduce` and displays the table with all Tasks and User-Actions.
 - The [Reducer-Function](reducer.ts) aka the **Reducer** (itself).
 - The [Test](reducer.test.ts) of the reducer.
 - The outsourced…
