@@ -36,7 +36,7 @@ What is important is that this function expects two parameters in exactly this o
 The result, after performing this function, is a `state` (again).
 This returned state must correspond to the structure of the state given by the 1st parameter.
 
-### The Task
+### Task
 
 The task of the reducer is to create a new state when it feels **responsible** for it.
 
@@ -52,29 +52,29 @@ To describe it not too complicated 🤷‍, I use the following code example:
 
 ```typescript
 switch (action.type) {
-	// Responsible to handle the action INIT
-	case 'INIT':
-		// do whatever is needed…
-		return newState;
-	// Responsible to handle the action DELETE_ITEM_WITH_ID
-	case 'DELETE_ITEM_WITH_ID':
-		const retrievedIdOfItem = action.payload.id;
-		// do whatever is needed…
-		return newState;
-	// Not responsible, so return the same state
-	default:
-		return state;
+  // Responsible to handle the action: INIT
+  case 'INIT':
+    // do whatever is needed to create a new state…
+    return newState;
+  // Responsible to handle the action: DELETE_ITEM_WITH_ID
+  case 'DELETE_ITEM_WITH_ID':
+    const retrievedIdOfItem = action.payload.id;
+    // do whatever is needed to create a new state…
+    return newState;
+  // Not responsible, so return the same state
+  default:
+    return state;
 }
 ```
 
 | ☝️Keep in mind ☝️                                                                                                                                                                                                                           |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | The result of a Reducer must be a **new** TypeScript object/array/primitiv for the component **to be re-rendered**. If the returned object/array/primitiv is the **same**, this will **not** result in a **re-rendering** of the component. |
 
-### Definition of a Reducer
+### Definition
 
 ```typescript
-// A function with two paramaters and return value
+// A function with two parameters and and one return value
 type reducer = (state: State, action: Action) => State;
 ```
 
@@ -90,35 +90,35 @@ has at least the _Key_ `type` and beyond that can have further _keys_, which are
 The concept and name _Action_ are adapted from [Redux;](https://redux.js.org) in fact, it is even a concept
 from the [Flux-Pattern](https://facebookarchive.github.io/flux).
 
-### Definition of an Action
+### Definition
 
 ```typescript
 // Plain variant
 type Action = {
-	type: string;
+  type: string;
 };
 
 // Variant with an optional error
 type Action = {
-	type: string;
-	// An Action can contain an optional error that a reducer should be able
-	// to handle. However, I've hardly seen this variant until today. And we
-	// will not use it here.
-	error?: Error;
+  type: string;
+  // An Action can contain an optional error that a reducer should be able
+  // to handle. However, I've hardly seen this variant until today. And we
+  // will not use it here.
+  error?: Error;
 };
 
 // Variant in which the payload is "grouped" in the seperate key with name `payload`
 type Action = {
-	type: string;
-	// I use the type `any` here to describe what any kind of payload is possible
-	// and depends on your needs. Please specify the type specifically for you.
-	payload: any;
+  type: string;
+  // I use the type `any` here to describe what any kind of payload is possible
+  // and depends on your needs. Please specify the type specifically for you.
+  payload: any;
 };
 
 // Variant with "inline" payload
 type Action = {
-	type: string;
-	[key: string]: any;
+  type: string;
+  [key: string]: any;
 };
 ```
 
@@ -129,16 +129,14 @@ type Action = {
 This React-Hook comes with the React-Library and must therefore be _named import_'ed before it can be used.
 
 ```typescript
-// Import Hook
 import { useReducer } from 'react';
 ```
 
 ### Call
 
-From now on, the React-Hook can use like the following:
+From now on, the React-Hook can use like the following inside a functional component:
 
 ```typescript
-// Usage Hook inside a functional component
 const [stateProducedByReducer, dispatch] = useReducer(reducer, initialState);
 ```
 
@@ -174,12 +172,12 @@ dispatch({ type: 'DELETE_ITEM_WITH_ID', payload: { id: 4711 } });
 dispatch({ type: 'DELETE_ITEM_WITH_ID', id: 4711 });
 ```
 
-#### 💡Keep in mind
+**💡 Keep in mind**
 
 - A commonly seen pattern is to use UPPERCASE strings as `type`s. It serves the distinction and is not obligatory.
 - In the end, every `string` is allowed that makes the code comprehensible and maintainable. Because the `type` is a string at the end that has to be considered in the reducer.
 
-## Showcase
+## 🧑‍🎨 Showcase
 
 By using a list of tasks I explain the `useReducer` React-Hook.
 
@@ -198,10 +196,10 @@ corresponding task (identifiable by a unique ID), depending on the _Action_.
 To make the application look a bit more "realistic," following pattern can change the progress of a task:
 
 | Progress️ of task | Open | In progress | Done |
-| :---------------- | :--: | :---------: | :--: |
-| Open              |      |     ✅      |      |
-| In progress       |  ✅  |             |  ✅  |
-| Done              |  ✅  |             |      |
+|:------------------|:----:|:-----------:|:----:|
+| Open              |      |      ✅      |      |
+| In progress       |  ✅   |             |  ✅   |
+| Done              |  ✅   |             |      |
 
 To have a bit of "UI logic" and make the application a bit more realistic, there's a plain
 function that computes the further possible switching-progress.
@@ -211,7 +209,7 @@ With this, it is possible to activate or deactivate the buttons to change the pr
 This kind of "UI logic" could also be (co)made by the _Reducer_. For the simplification of the example,
 yet, I've decided for an extra and independent function 😉
 
-## What you will find in this folder
+## 👀 What to find
 
 - [The Component](UseReducerComponent.tsx) uses the `useReduce`-Hook and displays the table with all Tasks and User-Actions.
 - The [Reducer-Function](reducer.ts) aka the **Reducer** itself 😉.
@@ -221,7 +219,7 @@ yet, I've decided for an extra and independent function 😉
   - [styles](useReducerStyle.css) to not blood the component.
 - This [description](UseReducer.md).
 
-## Further readings
+## 📚 Further readings
 
 - [React's doc about `useReducer`](https://react.dev/reference/react/useReducer)
 - [Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
