@@ -40,7 +40,7 @@ This returned state must correspond to the structure of the state given by the 1
 
 The task of the reducer is to create a new state when it feels **responsible** for it.
 
-How does it come now to this **responsibility**? Well by the [`action`](#action)!
+How does it come now to this **responsibility**? Well by the [`Action`](#action)!
 
 The Reducer receives the current/initial `state` and the [`Action`](#action) sent to it.
 With this information, the Reducer creates a new state.
@@ -74,18 +74,17 @@ switch (action.type) {
 ### Definition of a Reducer
 
 ```typescript
-// Arrow function expressions with two paramaters
+// A function with two paramaters and return value
 type reducer = (state: State, action: Action) => State;
 ```
 
 ## State
 
-A **state** can be any TypeScript object/array/primitiv you want to display and change
-within your component.
+A **state** can be any TypeScript object/array/primitiv you want to display and change within your component.
 
 ## Action
 
-An **Action** is a plain JavaScript/TypeScript-Object, often called PoJO (**P**lain **O**ld **J**avaScript **O**bject), which
+An **Action** is a plain Object, often called PoJO (**P**lain **O**ld **J**avaScript **O**bject), which
 has at least the _Key_ `type` and beyond that can have further _keys_, which are called `payload`.
 
 The concept and name _Action_ are adapted from [Redux;](https://redux.js.org) in fact, it is even a concept
@@ -153,8 +152,8 @@ As you can see, this React-Hook expects the two parameters:
 The result of this `useReducer`-Hook also follows a pattern which is already known from the `useState`-Hook.
 It returns an array with the following two values:
 
-1. The (current/initial) `state` produced/returned by the [Reducer](#reducer) and can be any TypeScript object/array/primitiv.
-2. A function with which we can stimulate a reducer to change the state.<br/> Or better saying `dispatch`'ing Actions to the Reducer.
+1. The (current/initial) `state` produced/returned by the [Reducer](#reducer) and can be any object/array/primitiv.
+2. A function with which we can stimulate a Reducer to change the state.<br/> Or better saying: `dispatch`'ing Actions to the Reducer.
 
 Like most other React-Hooks, this one uses the pattern of returning the two values as an array.
 This leads to a consistent readability and usage.
