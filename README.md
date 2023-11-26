@@ -56,7 +56,7 @@ pnpm run start
 ## 👀 What to find
 
 | Thema                                                            | Verzeichnis                                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | _(Simple)_ Components                                            | [`src/simpleComponents`](./src/simpleComponents)                                                                                                                                                                                              |
 | Hooks…                                                           | [`src/hooks`](./src/hooks)                                                                                                                                                                                                                    |
 | useState                                                         | [`./src/hooks/UseState.tsx`](./src/hooks/UseState.tsx)<br/> [`./src/hooks/ComponentWithState.tsx`](./src/hooks/ComponentWithState.tsx) <br/> [`./src/hooks/ComponentWithStateAndChildren.tsx`](./src/hooks/ComponentWithStateAndChildren.tsx) |
@@ -72,6 +72,7 @@ pnpm run start
 | Errors                                                           | [`/src/errorHandling`](./src/errorHandling)                                                                                                                                                                                                   |
 | Suspense                                                         | [`/src/suspense`](./src/suspense)                                                                                                                                                                                                             |
 | [BookMonkey API](https://github.com/workshops-de/bookmonkey-api) | [`/src/book`](./src/book)                                                                                                                                                                                                                     |
+| [Web Worker](./src/webWorker/README.md)                          | [`./src/webWorker`](./src/webWorker)                                                                                                                                                                                               |
 
 ## 🤝 You would like to contribute?
 
