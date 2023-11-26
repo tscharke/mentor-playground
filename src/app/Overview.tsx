@@ -9,6 +9,7 @@ const LINKS = [
 	{ link: 'errors', name: 'Errors' },
 	{ link: 'suspense', name: 'Suspense' },
 	{ link: 'book-app', name: 'Workshops.de - Book-App' },
+	{ link: 'webworker', name: 'WebWorker' },
 ];
 
 export const Overview = () => (

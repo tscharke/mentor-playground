@@ -1,0 +1,43 @@
+.WebWorker {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	border: 2px dotted #862f4b;
+	padding: 10px;
+}
+
+.WebWorker p {
+	padding: 0;
+	margin: 0 0 1rem;
+}
+
+.WebWorker nav {
+	display: flex;
+	gap: 1rem;
+	align-self: flex-start;
+}
+
+.WebWorker button {
+	display: flex;
+	height: 40px;
+	align-items: center;
+	max-width: 100px;
+}
+
+.WebWorker li.instruction {
+	list-style: decimal;
+}
+
+.WebWorker li.note {
+	list-style: none;
+	margin: 10px;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 0.75rem;
+}
+
+.WebWorker li code {
+	display: inline;
+	margin: 2px;
+}
