@@ -1,52 +1,70 @@
 {
-  "name": "mentor-playground",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "src/index.tsx",
-  "license": "MIT",
-  "dependencies": {
-    "@emotion/css": "11.11.2",
-    "@testing-library/react": "14.0.0",
-    "@testing-library/user-event": "14.5.1",
-    "@types/jest-in-case": "1.0.6",
-    "@types/react-redux": "7.1.27",
-    "@types/react-test-renderer": "18.0.3",
-    "@types/redux-logger": "3.0.10",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-error-boundary": "4.0.11",
-    "react-redux": "8.1.3",
-    "react-router-dom": "6.16.0",
-    "react-scripts": "5.0.1",
-    "redux": "4.2.1",
-    "redux-logger": "3.0.6",
-    "redux-thunk": "2.4.2"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "6.1.3",
-    "@testing-library/react-hooks": "^8.0.1",
-    "@types/jest": "^29.5.5",
-    "@types/react": "18.2.25",
-    "@types/react-dom": "18.2.10",
-    "alex": "^11.0.1",
-    "jest": "29.7.0",
-    "jest-in-case": "1.0.2",
-    "prettier": "3.0.3",
-    "react-test-renderer": "18.2.0",
-    "typescript": "5.2.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "check:docs": "alex *.md src/**/*.md"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "mentor-playground",
+	"version": "1.1.0",
+	"description": "A collection of code pieces to show the concepts of React & TypeScript in a pragmatic way by following the source code and the tests",
+	"keywords": [
+		"react",
+		"training",
+		"typescript",
+		"mentoring"
+	],
+	"license": "MIT",
+	"private": true,
+	"main": "src/index.tsx",
+	"type": "module",
+	"dependencies": {
+		"@emotion/css": "^11.11.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-error-boundary": "^4.0.11",
+		"react-redux": "^8.1.3",
+		"react-router-dom": "^6.16.0",
+		"redux": "^4.2.1",
+		"redux-logger": "^3.0.6",
+		"redux-thunk": "^2.4.2"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^6.1.3",
+		"@testing-library/react": "^14.0.0",
+		"@testing-library/react-hooks": "^8.0.1",
+		"@testing-library/user-event": "^14.5.1",
+		"@types/jest": "^29.5.5",
+		"@types/jest-in-case": "^1.0.6",
+		"@types/react": "^18.2.37",
+		"@types/react-dom": "^18.2.15",
+		"@types/react-redux": "^7.1.27",
+		"@types/react-test-renderer": "^18.0.3",
+		"@types/redux-logger": "^3.0.10",
+		"@vitejs/plugin-react-swc": "^3.5.0",
+		"alex": "^11.0.1",
+		"jest": "^29.7.0",
+		"jest-environment-jsdom": "^29.7.0",
+		"jest-in-case": "^1.0.2",
+		"jsdom": "^23.0.0",
+		"prettier": "^3.0.3",
+		"react-test-renderer": "^18.2.0",
+		"ts-jest": "^29.1.1",
+		"typescript": "^5.2.2",
+		"vite": "^5.0.0"
+	},
+	"scripts": {
+		"start": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"test": "jest",
+		"check:docs": "alex *.md src/**/*.md"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"jest": {
+		"verbose": true,
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testEnvironment": "jsdom"
+	}
 }
