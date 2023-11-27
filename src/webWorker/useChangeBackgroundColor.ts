@@ -21,7 +21,7 @@ const retrieveNewColorOfList = (listOfColors: string[]) => {
 	let newColorIndex = -1;
 
 	do {
-		newColorIndex = random(0, listOfColors.length - 1); //?
+		newColorIndex = random(0, listOfColors.length - 1);
 	} while (newColorIndex === lastColorIndex);
 	lastColorIndex = newColorIndex;
 

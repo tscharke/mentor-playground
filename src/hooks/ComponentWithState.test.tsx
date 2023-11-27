@@ -6,8 +6,8 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import ComponentWithState from './ComponentWithState';
 
-describe('Hooks', () => {
-	test('ComponentWithState', async () => {
+describe('ComponentWithState', () => {
+	test('if counter increases by clicking the button', async () => {
 		render(<ComponentWithState />);
 
 		const button = screen.getByRole('button');

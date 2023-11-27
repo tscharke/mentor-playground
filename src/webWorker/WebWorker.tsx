@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { SubTitle } from '../Headline';
 import { Explanation } from './Explanation';
 import { longRunningProcess } from './process';
@@ -11,7 +11,6 @@ export const WebWorker = () => {
 	const { reference, changeBackgroundColor } = useChangeBackgroundColor(LIST_OF_COLORS);
 	const worker: Worker = useMemo(() => {
 		// Creates a new WebWorker with an implementation you'll find inside this folder
-		// @ts-ignore
 		return new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' });
 	}, []);
 
