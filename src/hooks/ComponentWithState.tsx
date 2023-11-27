@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import { useState } from 'react';
 
 export default () => {
-  const [counter, setCounter] = useState<number>(0);
+	const [counter, setCounter] = useState<number>(0);
 
-  const increment = () => setCounter((prevCounter: number) => prevCounter + 1);
+	const increment = () => setCounter((prevCounter: number) => prevCounter + 1);
 
-  return (
-    <div onClick={increment} role="button">
-      Counter: <span>{counter}</span>
-    </div>
-  );
+	return (
+		<div onClick={increment} role="button">
+			Counter: <span>{counter}</span>
+		</div>
+	);
 };
