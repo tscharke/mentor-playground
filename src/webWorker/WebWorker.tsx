@@ -3,9 +3,9 @@ import { SubTitle } from '../Headline';
 import { Explanation } from './Explanation';
 import { longRunningProcess } from './process';
 import './styles.css';
-import { useChangeBackgroundColor } from './useChangeBackgroundColor';
+import { Color, useChangeBackgroundColor } from './useChangeBackgroundColor';
 
-const LIST_OF_COLORS = ['aqua', 'lightgreen', 'gold', 'lightblue', 'silver'];
+const LIST_OF_COLORS: Color[] = ['aqua', 'lightgreen', 'gold', 'lightblue', 'silver'];
 
 export const WebWorker = () => {
 	const { reference, changeBackgroundColor } = useChangeBackgroundColor(LIST_OF_COLORS);
