@@ -1,27 +1,25 @@
 import { useRef } from 'react';
+import { random } from './helper.ts';
 
-/**
- * Returns a random number from the given range.
- *
- * @param min {number} The beginning of the range
- * @param max {number} The end of the range
- * @returns {number} A random number from the given range
- */
-const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1 + min));
+export type Color = 'aqua' | 'lightgreen' | 'gold' | 'lightblue' | 'silver' | 'red' | 'green' | 'yellow';
+
+let lastColorIndex: number | null = null;
 
 /**
  * Chose a random color out of the given list of colors.
  * And ensures that the last chosen color isn't used (if there is more than one color to choose from).
  *
- * @param {string[]} listOfColors A list of valid HTML-Colors
- * @returns {string} The randomly chosen color
+ * @param {Color[]} listOfColors The list of colors to retrieve from.
+ * @returns {Color} The randomly chosen color.
  */
-let lastColorIndex = 0;
-const retrieveNewColorOfList = (listOfColors: string[]) => {
-	let newColorIndex = -1;
+export const retrieveNewColorOfList = (listOfColors: Color[]): Color => {
+	if (listOfColors.length === 1) {
+		return listOfColors[0];
+	}
 
+	let newColorIndex;
 	do {
-		newColorIndex = random(0, listOfColors.length - 1);
+		newColorIndex = random(listOfColors.length);
 	} while (newColorIndex === lastColorIndex);
 	lastColorIndex = newColorIndex;
 
@@ -33,12 +31,12 @@ const retrieveNewColorOfList = (listOfColors: string[]) => {
  * In addition, the reference must be set to the HTML-Element whose background-color is to be changed.
  * Without a reference to an HTML Element, nothing happens.
  *
- * @param {string[]} listOfColors A list of valid HTML-Colors
+ * @param {Color[]} listOfColors A list of predefined HTML-Colors
  * @returns {{ reference: RefObject<HTMLDivElement>, changeBackgroundColor: () => void }} An object including…
  * 					- The `reference` to set by the HTML-Element
  *					- The function with which the background-color can be changed to a random value
  */
-export const useChangeBackgroundColor = (listOfColors: string[]) => {
+export const useChangeBackgroundColor = (listOfColors: Color[]) => {
 	const reference = useRef<HTMLDivElement>(null);
 
 	const changeBackgroundColorOfReference = () => {
