@@ -1,9 +1,10 @@
+import { shuffle } from 'lodash';
 import { useRef } from 'react';
-import { random } from './helper.ts';
 
 export type Color = 'aqua' | 'lightgreen' | 'gold' | 'lightblue' | 'silver' | 'red' | 'green' | 'yellow';
 
-let lastColorIndex: number | null = null;
+let lastColorIndex = 0;
+let shuffledColors: Color[] = [];
 
 /**
  * Chose a random color out of the given list of colors.
@@ -13,17 +14,17 @@ let lastColorIndex: number | null = null;
  * @returns {Color} The randomly chosen color.
  */
 export const retrieveNewColorOfList = (listOfColors: Color[]): Color => {
+	// This avoids the call of `shuffle`
 	if (listOfColors.length === 1) {
 		return listOfColors[0];
 	}
 
-	let newColorIndex;
-	do {
-		newColorIndex = random(listOfColors.length);
-	} while (newColorIndex === lastColorIndex);
-	lastColorIndex = newColorIndex;
+	if (shuffledColors.length !== listOfColors.length) {
+		shuffledColors = shuffle([...listOfColors]);
+	}
+	lastColorIndex = (lastColorIndex + 1) % shuffledColors.length;
 
-	return listOfColors[newColorIndex];
+	return shuffledColors[lastColorIndex];
 };
 
 /**
