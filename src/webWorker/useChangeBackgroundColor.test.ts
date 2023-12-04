@@ -62,10 +62,11 @@ describe('useChangeBackgroundColorOfSection', () => {
 		mockedShuffle.mockReturnValueOnce(['red']);
 		// Mocks the return-value of Reacts `useRef`-function to simulate an element and make the condition truthy.
 		jest.spyOn(React, 'useRef').mockReturnValue({ current: { style: { backgroundColor: 'white' } } });
-
 		const colors: Color[] = ['red', 'yellow', 'green'];
+
 		const { result } = renderHook(() => useChangeBackgroundColor(colors));
 		act(() => result.current.changeBackgroundColor());
+
 		expect(result.current.reference.current?.style.backgroundColor).toBe('red');
 	});
 
@@ -74,10 +75,11 @@ describe('useChangeBackgroundColorOfSection', () => {
 		mockedShuffle.mockReturnValueOnce(['red']);
 		// Mocks the return-value of Reacts `useRef`-function to simulate an element and make the condition truthy.
 		jest.spyOn(React, 'useRef').mockReturnValue({ current: null });
-
 		const colors: Color[] = ['red', 'yellow', 'green'];
+
 		const { result } = renderHook(() => useChangeBackgroundColor(colors));
 		act(() => result.current.changeBackgroundColor());
+
 		expect(result.current.reference.current?.style.backgroundColor).toBeUndefined();
 	});
 
