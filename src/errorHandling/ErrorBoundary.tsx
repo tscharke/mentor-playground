@@ -1,7 +1,7 @@
-import { Component } from 'react';
+import { Component, ReactNode } from 'react';
 
 /*
-  With React's ErrorBoundary-Approach you have to learn
+  With React's ErrorBoundary-Approach, you have to learn
   the concepts of Class-Components, because you have to
   implement your own state and override the class-methods
   `getDerivedStateFromError` and `componentDidCatch`.
@@ -10,23 +10,23 @@ import { Component } from 'react';
   Error boundaries do not catch errors for:
 
   - Event handlers
-  - Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
+  - Asynchronous code (e.g., setTimeout or requestAnimationFrame callbacks)
   - Server side rendering
   - Errors thrown in the error boundary itself (rather than its children)
   */
-class ErrorBoundary extends Component<any, any> {
+class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
 	// Initial state
 	state = {
 		hasError: false,
 	};
 
 	// Override/Implement function out of React.Component
-	static getDerivedStateFromError(error: any) {
+	static getDerivedStateFromError(error: unknown) {
 		console.log('[ErrorBoundary|getDerivedStateFromError]', {
 			error,
 		});
 
-		// Return the a new state
+		// Return a new state
 		// In this case that an error occurred
 		return {
 			hasError: true,
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component<any, any> {
     This is the "Error Boundary"
     A new way of handling errors in React >16
   */
-	componentDidCatch(error: any, errorInfo: any) {
+	componentDidCatch(error: unknown, errorInfo: unknown) {
 		console.log('[ErrorBoundary|componentDidCatch]', {
 			error,
 			errorInfo,

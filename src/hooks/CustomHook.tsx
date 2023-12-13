@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Book } from '../interfaces';
 
 const useFetchDataFromAPI = (url: string, timeout: number = 2000) => {
-	const [data, setData] = useState<any>([]);
+	const [data, setData] = useState<string[]>([]);
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
@@ -36,7 +36,7 @@ const Children = () => {
 	);
 };
 
-export default () => {
+export default function CustomHook() {
 	const [data, loading] = useFetchDataFromAPI('http://localhost:4730/books');
 
 	return (
@@ -47,4 +47,4 @@ export default () => {
 			<Children />
 		</>
 	);
-};
+}

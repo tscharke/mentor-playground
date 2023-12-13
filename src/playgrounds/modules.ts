@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
 // Anonymous closure.
+import module from 'vite';
+
 (() => {
 	const variableInsideTheClosure = 'We keep these variables private inside this closure scope';
 
@@ -91,4 +94,4 @@ define([], function () {
 
 /* Native Modules */
 
-export const exposeFunction = () => {};
+const exposeFunction = () => {};

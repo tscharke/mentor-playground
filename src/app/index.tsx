@@ -12,7 +12,7 @@ import { Layout } from './Layout';
 import { Overview } from './Overview';
 import './styles.css';
 
-export default function () {
+export default function App() {
 	return (
 		<Router>
 			<Routes>

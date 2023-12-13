@@ -6,12 +6,12 @@ import '../app/styles.css';
 // Redux Store
 const appStore = createApplicationStore();
 
-export default function () {
-  return (
-    <>
-      <Provider store={appStore}>
-        <BookList />
-      </Provider>
-    </>
-  );
+export default function BookWithReduxProvider() {
+	return (
+		<>
+			<Provider store={appStore}>
+				<BookList />
+			</Provider>
+		</>
+	);
 }

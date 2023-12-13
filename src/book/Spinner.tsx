@@ -1,8 +1,8 @@
 interface Properties {
-  readonly message: string;
-  readonly show: boolean;
+	readonly message: string;
+	readonly show: boolean;
 }
 
-export default ({ message, show }: Properties) => {
-  return show ? <div>{message}</div> : null;
-};
+const Spinner = ({ message, show }: Properties) => (show ? <div>{message}</div> : null);
+
+export default Spinner;
