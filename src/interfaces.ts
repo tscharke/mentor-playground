@@ -1,27 +1,16 @@
-interface Publisher {
-  name: string;
-  url: string;
-}
-
-interface Book2 {
-  title: string;
-  isbn: string;
-  publisher: Publisher;
-}
-
 export interface ApplicationState {
-  book: BookState;
+	book: BookState;
 }
 
 export interface BookState {
-  loading: boolean;
-  error: string | null;
-  bookList: ReadonlyArray<Book>;
+	loading: boolean;
+	error: string | null;
+	bookList: ReadonlyArray<Book>;
 }
 
 export interface Book {
-  isbn: number;
-  title: string;
+	isbn: number;
+	title: string;
 }
 
 /*
@@ -39,13 +28,13 @@ export interface Book {
 
 */
 export interface Action {
-  type: string;
-  payload?: any;
-  error?: boolean;
-  [key: string]: any;
+	type: string;
+	payload?: unknown;
+	error?: boolean;
+	[key: string]: unknown;
 }
 
-type Dispatch = () => void;
+export type Dispatch = (action: Action) => void;
 
 /*
   A Thunk-Action is an action that returns a functions

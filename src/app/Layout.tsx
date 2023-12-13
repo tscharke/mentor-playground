@@ -2,7 +2,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 export const Layout = () => {
 	const navigation = useNavigate();
-	let { pathname } = useLocation();
+	const { pathname } = useLocation();
 	return (
 		<>
 			<div className="App">

@@ -1,4 +1,4 @@
-import { Action, Book, ThunkAction } from '../interfaces';
+import { Action, Book, Dispatch, ThunkAction } from '../interfaces';
 
 const BOOKS_URL = 'http://localhost:4730/books';
 
@@ -26,7 +26,7 @@ export const fetchBookListError = (error: string): Action => {
 */
 
 export const fetchBookList = (): ThunkAction => {
-	return async (dispatch: any) => {
+	return async (dispatch: Dispatch) => {
 		console.log('[Redux] Start fetching books.');
 		dispatch(fetchBookListPending());
 
@@ -53,7 +53,7 @@ export const deleteBookAction = (isbn: number): Action => ({
 	payload: isbn,
 });
 
-export const addBook = (book: any, createTime: any, userName: any): Action => {
+export const addBook = (book: Book, createTime: Date, userName: string): Action => {
 	return {
 		type: 'ADD_BOOK',
 		book: {

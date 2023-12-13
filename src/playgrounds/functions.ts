@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment, @typescript-eslint/no-unused-vars */
 // @ts-nocheck
 console.log('---[Functions|Start]---');
 
@@ -7,9 +8,9 @@ const functionExpression = function () {};
 
 const functionExpressionWithName = function someName() {};
 
-let arrowFunction = () => {};
+const arrowFunction = () => {};
 
-let arrowFunctionWithImplicitReturn = () => 'return stuff';
+const arrowFunctionWithImplicitReturn = () => 'return stuff';
 
 // Function as object
 function Bla() {

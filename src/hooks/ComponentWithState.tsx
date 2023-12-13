@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default () => {
+export default function ComponentWithState() {
 	const [counter, setCounter] = useState<number>(0);
 
 	const increment = () => setCounter((prevCounter: number) => prevCounter + 1);
@@ -10,4 +10,4 @@ export default () => {
 			Counter: <span>{counter}</span>
 		</div>
 	);
-};
+}

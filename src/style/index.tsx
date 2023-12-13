@@ -1,13 +1,13 @@
 import { BorderWrapper } from '../BorderWrapper';
-import SyledComponent from './SyledComponent1';
+import StyledComponent from './StyledComponent1';
 
 const HooksOverview = () => (
-  <BorderWrapper show type="solid">
-    <>
-      <pre>Styled Components Overview</pre>
-      <SyledComponent />
-    </>
-  </BorderWrapper>
+	<BorderWrapper show type="solid">
+		<>
+			<pre>Styled Components Overview</pre>
+			<StyledComponent />
+		</>
+	</BorderWrapper>
 );
 
 export default HooksOverview;

@@ -8,7 +8,7 @@ type CounterProperties = {
 
 const CounterNormalMode = ({ maxCount }: CounterProperties) => {
 	const [counter, setCounter] = useState(0);
-	const handleError = (error: any) => console.error('CounterNormalMode', error);
+	const handleError = (error: unknown) => console.error('CounterNormalMode', error);
 
 	const incrementCounter = () => {
 		try {
@@ -44,6 +44,6 @@ const CounterExtendedMode = ({ maxCount }: CounterProperties) => {
 	return <button onClick={incrementCounter}>Count {counter}</button>;
 };
 
-export default function ({ mode, ...props }: CounterProperties & { mode: Mode }) {
+export default function ErrorHandlingCounter({ mode, ...props }: CounterProperties & { mode: Mode }) {
 	return mode === 'normal' ? <CounterNormalMode {...props} /> : <CounterExtendedMode {...props} />;
 }
