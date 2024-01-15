@@ -21,6 +21,14 @@ But this is not the case; it is the array itself that provides this ability.
 In other words, any object that wants to make it possible to iterate over it has to provide this functionality itself.
 What it provides, we call an **Iterator**.
 
+It's worth noting that in ES6, most built-in data structures including Arrays, Maps, and Sets, already incorporate
+the "Iterator Protocol", which means you can iterate over them using the `for-of` loop right out of the box.
+
+This is a handy feature, allowing developers to directly loop through collections without the need to implement
+an Iterator manually.
+
+This highlights the power and flexibility of Iterators in modern JavaScript programming.
+
 ### Iterator Protocol
 
 To provide an iterator, an object must return a function at the object-property/key
@@ -144,6 +152,11 @@ With your knowledge about the [Iterator Functionality](#iterator-functionality) 
 - Saves the `value` in the variable provided (in our case `letter`).
 - Identifies the end of the `next` function based on the returned object `{ value: undefined, done: true }`.
 
+
+## Generators
+
+Please look at the code of the [test suite](./generators.test.ts).
+
 ## 👀 What to find
 
 ### Iterators
@@ -153,12 +166,23 @@ With your knowledge about the [Iterator Functionality](#iterator-functionality) 
   - what happens if there's no iterator and
   - how to implement your own iterator.
 
+### Generators
+
+- A [test suit](./generators.test.ts) that shows…
+  - the syntax of a generator (`function*`)
+  - the implementation of a generator
+  - that a generator generates or provides an [iterator](#iterators)
+
 ## 📚 Further readings / watching
 
 - [📚 MDN Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
-- [📚 MDN Iterators_and_Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [📚 MDN Iterators and Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 - [📽 The Complete Guide to JS Symbols ES6](https://www.youtube.com/watch?v=4J5hnOCj69w)
 - ️[📽 Iterators in JavaScript](https://youtu.be/W4brAobC2Hc?si=cqBaFy3MNIJKUqwu)
+- ️[📽 Generators in JavaScript](https://www.youtube.com/watch?v=QOnUcU8U_XE)
+- [📽 Generators in JavaScript - What, Why and How](https://www.youtube.com/watch?v=ategZqxHkz4)
+- [📽 Learn JavaScript Generators In 12 Minutes](https://www.youtube.com/watch?v=IJ6EgdiI_wU)
+- [📽 Do not yield to javascript generators! - Bruno Godefroy](https://www.youtube.com/watch?v=aYZIhQ3KGXQ)
 
 ## ❤️ Thanks & Love to…
 
