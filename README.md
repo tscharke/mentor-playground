@@ -55,25 +55,31 @@ pnpm run start
 
 ## 👀 What to find
 
-| Thema                                                            | Verzeichnis                                                                                                                                                                                                                                  |
-|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| _(Simple)_ Components                                            | [`src/simpleComponents`](./src/simpleComponents)                                                                                                                                                                                             |
-| Hooks…                                                           | [`src/hooks`](./src/hooks)                                                                                                                                                                                                                   |
-| useState                                                         | [`./src/hooks/UseState.tsx`](./src/hooks/UseState.tsx)<br/> [`./src/hooks/ComponentWithState.tsx`](./src/hooks/ComponentWithState.tsx) <br/> [`./src/hooks/ComponentWithStateAndChildren.tsx`](./src/hooks/ComponentWithStateAndChildren.tsx) |
-| useEffect                                                        | [`./src/hooks/ComponentUseEffectHook.tsx`](./src/hooks/ComponentUseEffectHook.tsx)                                                                                                                                                           |
-| [useReducer](./src/hooks/useReducer/UseReducer.md)               | [`./src/hooks/useReducer`](./src/hooks/useReducer)                                                                                                                                                                                           |
-| useContext                                                       | [`./src/hooks/UseContext1.tsx`](./src/hooks/UseContext1.tsx) <br/>[`./src/hooks/UseContext2.tsx`](./src/hooks/UseContext2.tsx)<br/>[`./src/hooks/UseContext3.tsx`](./src/hooks/UseContext2.tsx)                                              |
-| useFetchDataFromAPI (a Custom-Hook)                              | [`./src/hooks/CustomHook.tsx`](./src/hooks/CustomHook.tsx)                                                                                                                                                                                   |
-| useRef                                                           | [`./src/hooks/UseRefHook.tsx`](./src/hooks/UseRefHook.tsx)                                                                                                                                                                                   |
-| useMemo                                                          | [`./src/hooks/UseMemo.tsx`](./src/hooks/UseMemo.tsx)                                                                                                                                                                                         |
-| useCallback                                                      | [`./src/hooks/UseCallback.tsx`](./src/hooks/UseCallback.tsx)                                                                                                                                                                                 |
-| Styled Components                                                | [`/src/style`](./src/style)                                                                                                                                                                                                                  |
-| Forms                                                            | [`/src/forms`](./src/forms)                                                                                                                                                                                                                  |
-| Errors                                                           | [`/src/errorHandling`](./src/errorHandling)                                                                                                                                                                                                  |
-| Suspense                                                         | [`/src/suspense`](./src/suspense)                                                                                                                                                                                                            |
-| [BookMonkey API](https://github.com/workshops-de/bookmonkey-api) | [`/src/book`](./src/book)                                                                                                                                                                                                                    |
-| [Web Worker](./src/webWorker/README.md)                          | [`./src/webWorker`](./src/webWorker)                                                                                                                                                                                              |
-| [Iterators & Generators](./src/basics/README.md)                 | [`./src/basics`](./src/basics)                                                                                                                                                                                               |
+- [(Simple) Components](./src/simpleComponents) ([`./src/simpleComponents`](./src/simpleComponents))
+- [React-Hooks…](./src/hooks) [`src/hooks`](./src/hooks)
+  - useState
+    - [`./src/hooks/UseState.tsx`](./src/hooks/UseState.tsx)
+    - [`./src/hooks/ComponentWithState.tsx`](./src/hooks/ComponentWithState.tsx)
+    - [`./src/hooks/ComponentWithStateAndChildren.tsx`](./src/hooks/ComponentWithStateAndChildren.tsx)
+  - [useEffect](./src/hooks/ComponentUseEffectHook.tsx) [`./src/hooks/ComponentUseEffectHook.tsx`](./src/hooks/ComponentUseEffectHook.tsx)
+  - [useReducer](./src/hooks/useReducer/UseReducer.md) [`./src/hooks/useReducer`](./src/hooks/useReducer)
+  - useContext
+    - [`./src/hooks/UseContext1.tsx`](./src/hooks/UseContext1.tsx)
+    - [`./src/hooks/UseContext2.tsx`](./src/hooks/UseContext2.tsx)
+    - [`./src/hooks/UseContext3.tsx`](./src/hooks/UseContext2.tsx)
+  - [useFetchDataFromAPI (a Custom-Hook)](./src/hooks/CustomHook.tsx) [`./src/hooks/CustomHook.tsx`](./src/hooks/CustomHook.tsx)
+  - [useRef](./src/hooks/UseRefHook.tsx) [`./src/hooks/UseRefHook.tsx`](./src/hooks/UseRefHook.tsx)
+  - [useMemo](./src/hooks/UseMemo.tsx) [`./src/hooks/UseMemo.tsx`](./src/hooks/UseMemo.tsx)
+  - [useCallback](./src/hooks/UseCallback.tsx) [`./src/hooks/UseCallback.tsx`](./src/hooks/UseCallback.tsx)
+- [Styled Components](./src/style) [`./src/style`](./src/style)
+- [Forms](./src/forms) [`./src/forms`](./src/forms)
+- [Errors](./src/errorHandling) [`./src/errorHandling`](./src/errorHandling)
+- [Suspense](./src/suspense) [`./src/suspense`](./src/suspense)
+- [BookMonkey API](./src/book) [`./src/book`](./src/book)
+- [Web Worker](./src/webWorker/README.md) [`./src/webWorker`](./src/webWorker)
+- [Iterators & Generators](./src/basics/README.md) [`./src/basics`](./src/basics)
+- [Playgrounds](./src/playgrounds) [`./src/playgrounds`](./src/playgrounds)
+  - [Factorial of a number](./src/playgrounds/factorial.test.ts) [`./src/playgrounds/factorial.test.ts`](./src/playgrounds/factorial.test.ts)
 
 ## 🤝 You would like to contribute?
 
