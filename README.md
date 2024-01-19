@@ -85,3 +85,8 @@ pnpm run start
 
 I love if you want to contribute to this project.
 To do so, please follow the steps described [here](CONTRIBUTING.md) - thank you very much ❤️🙏
+
+## ❤️🙏 Love & Thanks
+
+- My thanks for the photo displayed on social media goes to: [Desola Lanre-Ologun](https://unsplash.com/de/@disruptxn)
+
