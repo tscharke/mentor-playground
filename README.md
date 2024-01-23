@@ -80,6 +80,7 @@ pnpm run start
 - [Iterators & Generators](./src/basics/README.md) [`./src/basics`](./src/basics)
 - [Playgrounds](./src/playgrounds) [`./src/playgrounds`](./src/playgrounds)
   - [Factorial of a number](./src/playgrounds/factorial.test.ts) [`./src/playgrounds/factorial.test.ts`](./src/playgrounds/factorial.test.ts)
+  - [Left padding of numbers](./src/playgrounds/leftPadding.test.ts) [`./src/playgrounds/leftPadding.test.ts`](./src/playgrounds/leftPadding.test.ts)
 
 ## 🤝 You would like to contribute?
 
