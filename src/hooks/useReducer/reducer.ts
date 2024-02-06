@@ -27,13 +27,13 @@ export const reducer = (state: Task[], { type, payload: { id } }: Action): Task[
 					// If it's the task-object to be modifying
 					task.id === id && task.progress !== 'done'
 						? // Create and add a new task-object
-						  result.concat({
+							result.concat({
 								...task,
 								// Adjusted progress
 								progress: 'done',
-						  })
+							})
 						: // Add the unmodified task-object
-						  result.concat(task),
+							result.concat(task),
 				[], // Initiated with a new array
 			);
 		case 'OPEN':
@@ -44,7 +44,7 @@ export const reducer = (state: Task[], { type, payload: { id } }: Action): Task[
 						? result.concat({
 								...task,
 								progress: 'open',
-						  })
+							})
 						: result.concat(task),
 				[],
 			);
