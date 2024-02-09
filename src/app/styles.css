@@ -5,6 +5,12 @@
 	--color-gray-50: rgba(202, 200, 203, 0.3);
 	--color-gray-200: #f3f3f3;
 	--color-gray-500: #c9c9c9;
+	--font-size-950: 1.75rem;
+	--font-size-800: 1.25rem;
+	--font-size-600: 1.1rem;
+	--font-size-500: 1rem;
+	--font-size-400: 0.95rem;
+	--font-size-300: 0.75rem;
 }
 
 html {
@@ -21,31 +27,34 @@ html {
 	flex-direction: column;
 }
 
+.App h1,
+.App h2 {
+	align-self: center;
+}
+
 .App h1 {
 	color: var(--color-red);
 	text-shadow: 3px 3px var(--color-gray-200);
+	font-size: var(--font-size-950);
 	margin: 0;
-	align-self: center;
-	font-size: 1.75rem;
 }
 
 .App h2 {
 	color: var(--color-gray-500);
+	font-size: var(--font-size-800);
 	line-height: 1rem;
-	align-self: center;
-	font-size: 1.25rem;
 }
 
 nav {
-	margin-bottom: 1rem;
 	align-self: center;
 	display: flex;
+	margin-bottom: 1rem;
 }
 
 nav div {
-	color: #862f4b;
-	text-transform: uppercase;
+	color: var(--color-red);
 	text-decoration: underline;
+	text-transform: uppercase;
 }
 
 nav div:hover {
@@ -56,38 +65,32 @@ nav div:hover {
 	padding-bottom: 3.125rem;
 }
 
-.Outlet pre {
-	display: inline-block;
-	line-height: 1.25rem;
-	margin-top: 0;
-	margin-bottom: 1.25rem;
-	text-decoration: underline;
-}
-
+.Outlet pre,
 .Outlet h2 {
+	font-size: var(--font-size-400);
+	margin: 0 0 1.25rem 0;
+	line-height: 1.25rem;
 	color: var(--color-gray-500);
-	font-size: 0.95rem;
 }
 
 .Outlet section div:nth-child(odd) {
 	background-color: aliceblue;
 }
 
-.Outlet section header {
-	margin: 0 10px;
-	padding: 0;
-	text-decoration: underline;
-	text-transform: uppercase;
-	font-size: 0.75rem;
-	color: green;
-	background-color: greenyellow;
+.Outlet section header,
+.Outlet code,
+.selection code {
+	font-size: var(--font-size-300);
+	display: inline-block;
+	margin: 10px 0;
 }
 
-.Outlet code {
-	font-family: monospace;
-	font-size: 0.75rem;
-	margin: 10px;
-	display: inline-block;
+.Outlet section header {
+	text-transform: uppercase;
+	color: green;
+	background-color: greenyellow;
+	padding: 0;
+	margin: 0 10px;
 }
 
 ul {
@@ -96,20 +99,14 @@ ul {
 	padding: 0;
 }
 
-li a:link,
-li a:visited,
-li a:active {
-	color: var(--color-red);
+li a {
 	text-decoration: none;
+	color: var(--color-red);
 }
 
 li a:hover {
-	font-size: 1.1rem;
+	font-size: var(--font-size-600);
 	background-color: var(--color-gray-50);
-}
-
-.text-sm {
-	font-size: 0.75rem;
 }
 
 .selection {
@@ -118,35 +115,19 @@ li a:hover {
 	gap: 20px;
 }
 
-.selection section header {
-	margin: 0;
-	padding: 0;
-	background-color: var(--color-white);
-	font-size: 1rem;
-	color: var(--color-black);
+.selection section header,
+.selection section span {
+	font-size: var(--font-size-300);
 	text-decoration: underline;
-}
-
-.selection section header span:before {
-	content: ' ';
-	font-size: 0.75rem;
-}
-
-.selection section header span {
+	color: var(--color-black);
+	background-color: var(--color-white);
 	margin: 0;
-	font-size: 0.75rem;
-}
-
-.selection section span:before {
-	content: ' ';
-	font-size: 1rem;
 }
 
 .selection section span {
 	margin-left: 10px;
-	font-size: 0.75rem;
 }
 
-.selection code {
-	margin: 0;
+.text-sm {
+	font-size: var(--font-size-300);
 }
