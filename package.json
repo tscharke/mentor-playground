@@ -61,6 +61,7 @@
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"test": "jest",
+		"check:all": "pnpm run check:docs && pnpm run check:code",
 		"check:docs": "alex *.md src/**/*.md",
     "check:code": "pnpm run lint",
     "lint": "eslint 'src/**/*.{js*,ts*}'"
