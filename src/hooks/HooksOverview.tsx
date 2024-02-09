@@ -14,6 +14,7 @@ import {
 	UseRef,
 	UseState,
 } from './index';
+import { UseHookOverview } from './use/UseHookOverview.tsx';
 
 const List = ({ children }: { children: React.ReactNode }) => (
 	<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>{children}</div>
@@ -56,6 +57,7 @@ const TOC = () => {
 				'useContext',
 				{ hash: 'useMemo', title: 'useMemo & useCallback' },
 				'useReducer',
+				'use',
 			]}
 		/>
 	);
@@ -98,8 +100,12 @@ export const HooksOverview = () => (
 					</>
 				</Element>
 
-				<Element headline="Reducer" id="useRedcuer">
+				<Element headline="Reducer" id="useReducer">
 					<UseReducerComponent />
+				</Element>
+
+				<Element headline="Use" id="use">
+					<UseHookOverview />
 				</Element>
 			</List>
 		</ContentLayout>
