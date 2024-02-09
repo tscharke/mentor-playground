@@ -1,5 +1,5 @@
-import React, { useReducer } from 'react';
-import { SubTitle } from '../../Headline';
+import { useReducer } from 'react';
+import { SubTitle } from '../../app/components/Headline';
 import { ProgressOfTask, Task } from './interfaces';
 import { reducer } from './reducer';
 import './useReducerStyle.css';

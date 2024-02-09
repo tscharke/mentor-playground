@@ -1,7 +1,7 @@
-import { BorderWrapper } from '../BorderWrapper';
-import StyledComponent from './StyledComponent1';
+import { BorderWrapper } from '../app/components/BorderWrapper';
+import StyledComponent from './StyledComponent';
 
-const HooksOverview = () => (
+const StyledComponentOverview = () => (
 	<BorderWrapper show type="solid">
 		<>
 			<pre>Styled Components Overview</pre>
@@ -10,4 +10,4 @@ const HooksOverview = () => (
 	</BorderWrapper>
 );
 
-export default HooksOverview;
+export default StyledComponentOverview;

@@ -4,7 +4,7 @@
   Read and modify values
 */
 import React, { ReactElement, ReactNode, useContext, useState } from 'react';
-import { SubTitle } from '../Headline';
+import { SubTitle } from '../app/components/Headline';
 
 const defaultValue = {
 	foo: 'bar',

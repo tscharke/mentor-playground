@@ -4,7 +4,7 @@
   Read values out of the Context
 */
 import React, { ReactElement, useContext } from 'react';
-import { SubTitle } from '../Headline';
+import { SubTitle } from '../app/components/Headline';
 
 const defaultValue = {
 	foo: 'default foo',

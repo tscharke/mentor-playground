@@ -1,6 +1,6 @@
 // import { useState, useCallback } from 'react';
 import { useState } from 'react';
-import { SubTitle } from '../Headline';
+import { SubTitle } from '../app/components/Headline';
 
 // Keeps track of all created functions during the app's life
 const functions: Set<() => void> = new Set();

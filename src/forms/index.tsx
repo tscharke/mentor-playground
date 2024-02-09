@@ -1,4 +1,4 @@
-import { ContentLayout } from '../ContentLayout';
+import { ContentLayout } from '../app/components/ContentLayout';
 import Controlled from './Controlled';
 import Uncontrolled from './Uncontrolled';
 

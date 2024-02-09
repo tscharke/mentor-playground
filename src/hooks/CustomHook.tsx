@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Book } from '../interfaces';
+import { Book } from '../book/interfaces.ts';
 
 const useFetchDataFromAPI = (url: string, timeout: number = 2000) => {
 	const [data, setData] = useState<string[]>([]);

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { SubTitle } from '../Headline';
+import { SubTitle } from '../app/components/Headline';
 
 /*
 const syncWait = (ms: number = 1000) => {

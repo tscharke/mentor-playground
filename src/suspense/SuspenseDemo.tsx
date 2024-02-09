@@ -8,8 +8,8 @@
 */
 
 import { Suspense, useEffect, useState } from 'react';
-import { ContentLayout } from '../ContentLayout';
-import { Headline } from '../Headline';
+import { ContentLayout } from '../app/components/ContentLayout';
+import { Headline } from '../app/components/Headline';
 import { wrapPromise } from './helper';
 import { IUser, UserList } from './UserList';
 

@@ -1,4 +1,4 @@
-import { Action, Book, Dispatch, ThunkAction } from '../interfaces';
+import { Action, Book, Dispatch, ThunkAction } from './interfaces';
 
 const BOOKS_URL = 'http://localhost:4730/books';
 

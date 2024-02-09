@@ -12,7 +12,7 @@ const LINKS = [
 	{ link: 'webworker', name: 'WebWorker' },
 ];
 
-export const Overview = () => (
+export const AppOverview = () => (
 	<ul className="Overview">
 		{LINKS.map(({ link, name }) => (
 			<li key={link}>

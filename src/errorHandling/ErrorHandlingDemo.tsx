@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import { ContentLayout } from '../ContentLayout';
+import { ContentLayout } from '../app/components/ContentLayout';
 import Counter from './Counter';
 import ReactErrorBoundary from './ErrorBoundary';
 import { Fallback } from './Fallback';

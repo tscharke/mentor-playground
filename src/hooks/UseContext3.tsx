@@ -4,7 +4,7 @@
   Multiple Context-Provider
 */
 import React, { ReactElement, useContext } from 'react';
-import { SubTitle } from '../Headline';
+import { SubTitle } from '../app/components/Headline';
 
 const ThemeContext = React.createContext({
 	theme: 'light',

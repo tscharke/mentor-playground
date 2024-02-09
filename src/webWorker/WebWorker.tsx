@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { SubTitle } from '../Headline';
+import { SubTitle } from '../app/components/Headline';
 import { Explanation } from './Explanation';
 import { longRunningProcess } from './process';
 import './styles.css';

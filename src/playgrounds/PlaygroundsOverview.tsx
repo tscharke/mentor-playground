@@ -1,4 +1,4 @@
-import { ContentLayout } from '../ContentLayout';
+import { ContentLayout } from '../app/components/ContentLayout';
 import UsageOfInterfaces from './usageOfInterfaces';
 
 const PlaygroundsOverview = () => (

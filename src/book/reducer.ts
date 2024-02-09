@@ -1,5 +1,5 @@
-import { Action, Book, BookState } from '../interfaces';
 import { FETCH_BOOK_LIST_ERROR, FETCH_BOOK_LIST_PENDING, FETCH_BOOK_LIST_SUCCESS } from './actions';
+import { Action, Book, BookState } from './interfaces';
 
 const INITIAL_STATE: BookState = {
 	loading: false,

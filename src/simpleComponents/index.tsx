@@ -1,4 +1,4 @@
-import { ContentLayout } from '../ContentLayout';
+import { ContentLayout } from '../app/components/ContentLayout';
 import FirstComponent from './FirstComponent';
 import ComponentWithProperties from './PassProperties';
 import { AnotherComponent } from './SecondComponent';
