@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BookApp from '../book';
-import { BookCleanCodeOverview } from '../bookCleanCode/BookCleanCodeOverview';
+import { BookCleanCodeOverview } from '../bookCleanCode/views/BookCleanCodeOverview';
 import ErrorHandlingDemo from '../errorHandling/ErrorHandlingDemo';
 import FormsExample from '../forms';
 import { HooksOverview } from '../hooks/HooksOverview';
