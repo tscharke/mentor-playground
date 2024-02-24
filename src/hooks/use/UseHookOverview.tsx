@@ -18,12 +18,12 @@
 		- React Server Components (RSC): https://react.dev/blog/2023/03/22/react-labs-what-we-have-been-working-on-march-2023#react-server-components
  */
 import { Suspense, useState } from 'react';
-import { SubTitle } from '../../app/components/Headline.tsx';
-import { BackgroundColorContextProvider } from './context/BackgroundColorContextProvider.tsx';
-import { UseHookContext } from './context/UseHookContext.tsx';
-import { Loader } from './fetch/Loader.tsx';
-import { UseHookFetch } from './fetch/UseHookFetch.tsx';
-import { Strategy } from './interfaces.ts';
+import { SubTitle } from '../../app/components/Headline';
+import { BackgroundColorContextProvider } from './context/BackgroundColorContextProvider';
+import { UseHookContext } from './context/UseHookContext';
+import { Loader } from './fetch/Loader';
+import { UseHookFetch } from './fetch/UseHookFetch';
+import { Strategy } from './interfaces';
 
 const WAIT_TIME = 1_000;
 

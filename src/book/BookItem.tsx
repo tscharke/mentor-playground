@@ -1,4 +1,4 @@
-import { Book } from '../interfaces';
+import { Book } from './interfaces';
 
 interface Properties {
 	book: Book;

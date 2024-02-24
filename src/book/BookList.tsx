@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { ApplicationState, Book } from '../interfaces';
 import { deleteBookAction, fetchBookList } from './actions';
 import BookItem from './BookItem';
+import { ApplicationState, Book } from './interfaces';
 import Spinner from './Spinner';
 
 interface Properties {

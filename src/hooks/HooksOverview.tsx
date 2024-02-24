@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ContentLayout, ContentLayoutProperties } from '../app/components/ContentLayout.tsx';
+import { ContentLayout, ContentLayoutProperties } from '../app/components/ContentLayout';
 import ComponentUseEffect from './ComponentUseEffectHook';
 import ComponentWithState from './ComponentWithState';
 import { ComponentWithStateAndChildren } from './ComponentWithStateAndChildren';
@@ -14,7 +14,7 @@ import {
 	UseRef,
 	UseState,
 } from './index';
-import { UseHookOverview } from './use/UseHookOverview.tsx';
+import { UseHookOverview } from './use/UseHookOverview';
 
 const List = ({ children }: { children: React.ReactNode }) => (
 	<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>{children}</div>

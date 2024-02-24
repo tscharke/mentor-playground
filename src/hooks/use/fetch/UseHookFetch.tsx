@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { use } from 'react';
-import { Task } from '../interfaces.ts';
+import { Task } from '../interfaces';
 
 type UseHookFetchProperties = {
 	waitTime: number;

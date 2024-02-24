@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Book } from '../book/interfaces.ts';
+import { Book } from '../book/interfaces';
 
 // const URL = 'http://localhost:4730/books';
 const URL = 'https://jsonplaceholder.typicode.com/users?https://jsonplaceholder.typicode.com/users?id=1&id=2&id=3';

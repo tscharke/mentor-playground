@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from 'react';
-import { BackgroundColorContextValue, BackgroundColorMode } from '../interfaces.ts';
+import { BackgroundColorContextValue, BackgroundColorMode } from '../interfaces';
 
 export const defaultBackgroundColorContextValue: BackgroundColorContextValue = {
 	mode: 'light',

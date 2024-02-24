@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { ReactNode, use } from 'react';
-import { BackgroundColorMode } from '../interfaces.ts';
-import { BackgroundColorContext, defaultBackgroundColorContextValue } from './BackgroundColorContextProvider.tsx';
+import { BackgroundColorMode } from '../interfaces';
+import { BackgroundColorContext, defaultBackgroundColorContextValue } from './BackgroundColorContextProvider';
 
 type UseHookContextProperties = {
 	changeableMode: boolean;
