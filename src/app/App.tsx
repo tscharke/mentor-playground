@@ -8,7 +8,7 @@ import SimpleComponentsOverview from '../simpleComponents';
 import StyledComponentOverview from '../style';
 import { SuspenseDemo } from '../suspense/SuspenseDemo';
 import { WebWorker } from '../webWorker/WebWorker';
-import { AppOverview } from './AppOverview.tsx';
+import { AppOverview } from './AppOverview';
 import { Layout } from './components/Layout';
 import './styles.css';
 
