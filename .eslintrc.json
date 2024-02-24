@@ -1,14 +1,25 @@
 {
 	"parser": "@typescript-eslint/parser",
-	"extends": ["plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
-	"plugins": ["@typescript-eslint", "react", "prettier"],
+	"extends": [
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"plugin:prettier/recommended",
+		"plugin:import/recommended",
+		"plugin:import/typescript"
+	],
+	"plugins": ["@typescript-eslint", "react", "prettier", "import"],
 	"rules": {
 		"prettier/prettier": "error",
-		"react/react-in-jsx-scope": "off"
+		"react/react-in-jsx-scope": "off",
+		"import/extensions": ["error"]
 	},
 	"settings": {
 		"react": {
 			"version": "detect"
+		},
+		"import/resolver": {
+			"typescript": true,
+			"node": true
 		}
 	}
 }
