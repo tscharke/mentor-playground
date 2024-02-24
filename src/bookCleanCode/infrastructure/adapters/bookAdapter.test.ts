@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { BookServerModel } from '../interfaces';
-import { booksAdapterFactory } from './booksAdapter';
+import type { RawBook } from '../models';
+import { bookAdapterFactory } from './bookAdapter';
 
-const mockedBookFromTheServer: BookServerModel = {
+const mockedBookFromTheServer: RawBook = {
 	id: '9780071494618',
 	title: 'Hacking Exposed Web 2.0',
 	subtitle: 'Web 2.0 Security Secrets and Solutions',
@@ -20,9 +20,9 @@ const mockedBookFromTheServer: BookServerModel = {
 const GETRequest = jest.spyOn(axios, 'get');
 
 describe('Book Adapter', () => {
-	it('loads a single book from the server', async () => {
+	it('loads a book from the server', async () => {
 		GETRequest.mockResolvedValueOnce({ data: [mockedBookFromTheServer] });
-		const createBookAdapter = booksAdapterFactory();
+		const createBookAdapter = bookAdapterFactory();
 		const loadAllBooksFromServer = createBookAdapter();
 
 		const result = await loadAllBooksFromServer();

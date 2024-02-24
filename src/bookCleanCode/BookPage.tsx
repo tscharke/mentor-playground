@@ -1,8 +1,8 @@
-import { useBooks } from '../hooks/useBooks';
 import { BookList } from './BookList';
+import { useBooks } from './infrastructure/useBooks';
 import { SuspenseWithErrorHandling } from './SuspenseWithErrorHandling';
 
-export const BooksPage = () => {
+export const BookPage = () => {
 	const [books, loadAllBooks, error] = useBooks();
 
 	return (

@@ -1,10 +1,8 @@
-export type BookViewModel = {
-	isbn: string;
-	title: string;
-	author: string;
-};
-
-export type BookServerModel = {
+/**
+ * Represents a book retrieved from the server.
+ * In our case, it means the full book with all available keys.
+ */
+export type RawBook = {
 	id: string;
 	title: string;
 	subtitle: string;
@@ -20,4 +18,4 @@ export type BookServerModel = {
 
 export type Factory = () => Adapter;
 
-export type Adapter = () => Promise<BookServerModel[]>;
+export type Adapter = () => Promise<RawBook[]>;

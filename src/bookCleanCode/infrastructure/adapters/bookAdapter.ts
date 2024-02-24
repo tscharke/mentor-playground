@@ -1,14 +1,14 @@
 import axios, { AxiosError } from 'axios';
-import { Adapter, BookServerModel, Factory } from '../interfaces';
+import type { Adapter, Factory, RawBook } from '../models';
 import { BookAdapterError } from './BookAdapterError';
 
 const URL = 'http://localhost:4730/books';
 
-export const booksAdapterFactory = (): Factory => {
+export const bookAdapterFactory = (): Factory => {
 	return (): Adapter => {
 		return async () => {
 			try {
-				const response = await axios.get<BookServerModel[]>(URL, {
+				const response = await axios.get<RawBook[]>(URL, {
 					headers: {
 						Accept: 'application/json',
 						'Content-Type': 'application/json',

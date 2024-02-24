@@ -2,10 +2,10 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import axios from 'axios';
-import { BookServerModel } from '../interfaces';
-import { BooksPage } from './BooksPage';
+import { BookPage } from './BookPage';
+import type { RawBook } from './infrastructure/models';
 
-const mockedBookFromTheServer: BookServerModel = {
+const mockedBookFromTheServer: RawBook = {
 	id: '1001606140805',
 	title: 'Java Web Scraping Handbook',
 	subtitle: 'Learn advanced Web Scraping techniques',
@@ -22,17 +22,14 @@ const mockedBookFromTheServer: BookServerModel = {
 
 const GETRequest = jest.spyOn(axios, 'get');
 
-describe('BookMonkey Books', () => {
+describe('Book Page', () => {
 	it('loads and shows a list of books', async () => {
 		GETRequest.mockResolvedValueOnce({ data: [mockedBookFromTheServer] });
-		render(<BooksPage />);
 
+		render(<BookPage />);
 		expect(screen.queryByText(/java web scraping handbook/i)).not.toBeInTheDocument();
 
-		// Click the loading-Button to fetch the books
 		await userEvent.click(screen.getByRole('button'));
-
-		// Displays the data of the book (title, isbn, author)
 		expect(screen.queryByText(/java web scraping handbook/i)).toBeInTheDocument();
 		expect(screen.queryByText(/1001606140805/i)).toBeInTheDocument();
 		expect(screen.queryByText(/kevin sahin/i)).toBeInTheDocument();

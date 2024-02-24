@@ -1,8 +1,8 @@
 import { isEmpty } from 'lodash';
-import { BookViewModel } from '../interfaces';
+import type { Book } from './domain/models';
 
 type BookListProperties = {
-	books: BookViewModel[];
+	books: Book[];
 };
 
 export const BookList = ({ books }: BookListProperties) => {

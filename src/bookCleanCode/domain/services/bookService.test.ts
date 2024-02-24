@@ -1,15 +1,16 @@
-import { BookServerModel } from '../interfaces';
-import { createBooks } from './BooksService';
+import type { RawBook } from '../../infrastructure/models';
+import { createListOfBooks } from './bookService';
 
-describe('Books Service', () => {
+describe('Book Service', () => {
 	it('returns an empty list when no books are available', () => {
 		const booksFromServer = undefined;
-		const books = createBooks(booksFromServer);
+
+		const books = createListOfBooks(booksFromServer);
 		expect(books).toEqual([]);
 	});
 
 	it('returns an model when books available', () => {
-		const booksFromServer: BookServerModel[] = [
+		const booksFromServer: RawBook[] = [
 			{
 				id: '1001606140805',
 				title: 'Java Web Scraping Handbook',
@@ -25,7 +26,8 @@ describe('Books Service', () => {
 				userId: 1,
 			},
 		];
-		const books = createBooks(booksFromServer);
+
+		const books = createListOfBooks(booksFromServer);
 		expect(books).toEqual([
 			{
 				isbn: '1001606140805',
