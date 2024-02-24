@@ -4,7 +4,7 @@ import { BookAdapterError } from './BookAdapterError';
 
 const URL = 'http://localhost:4730/books';
 
-export const useBooksAdapterFactory = (): Factory => {
+export const booksAdapterFactory = (): Factory => {
 	return (): Adapter => {
 		return async () => {
 			try {
