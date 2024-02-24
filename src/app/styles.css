@@ -131,3 +131,7 @@ li a:hover {
 .text-sm {
 	font-size: var(--font-size-300);
 }
+
+.WebWorker ul {
+	padding: 10px;
+}
