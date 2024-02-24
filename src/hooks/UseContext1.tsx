@@ -3,14 +3,14 @@
 
   Read values out of the Context
 */
-import React, { ReactElement, useContext } from 'react';
+import { createContext, ReactElement, useContext } from 'react';
 import { SubTitle } from '../app/components/Headline';
 
 const defaultValue = {
 	foo: 'default foo',
 };
 
-const MyContext = React.createContext(defaultValue);
+const MyContext = createContext(defaultValue);
 
 const Child1 = () => {
 	const valueOutOfContext = useContext(MyContext);

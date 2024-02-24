@@ -3,7 +3,7 @@
 
   Read and modify values
 */
-import React, { ReactElement, ReactNode, useContext, useState } from 'react';
+import { createContext, ReactElement, ReactNode, useContext, useState } from 'react';
 import { SubTitle } from '../app/components/Headline';
 
 const defaultValue = {
@@ -11,7 +11,7 @@ const defaultValue = {
 	changeValue: () => {},
 };
 
-const MyContext = React.createContext(defaultValue);
+const MyContext = createContext(defaultValue);
 
 const MyContextProvider = ({ children }: { children: ReactNode }) => {
 	const valueOutOfContext = useContext(MyContext);
