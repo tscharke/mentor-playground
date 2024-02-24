@@ -1,3 +1,7 @@
+export interface ApplicationState {
+	book: BookState;
+}
+
 export interface BookState {
 	loading: boolean;
 	error: string | null;
