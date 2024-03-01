@@ -2,6 +2,8 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import axios from 'axios';
+import { ErrorBoundary } from 'react-error-boundary';
+import { BookError } from './BookError';
 import { BookPage } from './BookPage';
 import type { RawBook } from './infrastructure/models';
 
@@ -33,6 +35,18 @@ describe('Book Page', () => {
 		expect(screen.queryByText(/java web scraping handbook/i)).toBeInTheDocument();
 		expect(screen.queryByText(/1001606140805/i)).toBeInTheDocument();
 		expect(screen.queryByText(/kevin sahin/i)).toBeInTheDocument();
+	});
+
+	it('shows the error that occurred while loading the books', async () => {
+		GETRequest.mockRejectedValue(new Error('Force an error'));
+
+		render(
+			<ErrorBoundary fallbackRender={({ error }) => <BookError {...error} />}>
+				<BookPage />
+			</ErrorBoundary>,
+		);
+		await userEvent.click(screen.getByRole('button'));
+		expect(screen.queryByText(/Force an error/i)).toBeInTheDocument();
 	});
 
 	afterEach(() => {
