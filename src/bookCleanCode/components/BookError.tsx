@@ -1,4 +1,4 @@
-import type { BookAdapterError } from './infrastructure/adapters/BookAdapterError';
+import type { BookAdapterError } from '../infrastructure/adapters/BookAdapterError';
 
 export type BooksErrorProperties = BookAdapterError;
 
