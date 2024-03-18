@@ -10,6 +10,7 @@ const LINKS = [
 	{ link: 'suspense', name: 'Suspense' },
 	{ link: 'book-app', name: 'Workshops.de - Book-App' },
 	{ link: 'webworker', name: 'WebWorker' },
+	{ link: 'book-cleanCode', name: 'Bookmonkey-API (Clean-Code approach)' },
 ];
 
 export const AppOverview = () => (

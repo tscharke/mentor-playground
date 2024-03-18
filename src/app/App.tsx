@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BookApp from '../book';
+import { BookCleanCodeOverview } from '../bookCleanCode/BookCleanCodeOverview';
 import ErrorHandlingDemo from '../errorHandling/ErrorHandlingDemo';
 import FormsExample from '../forms';
 import { HooksOverview } from '../hooks/HooksOverview';
@@ -27,6 +28,7 @@ export default function App() {
 					<Route path="suspense" element={<SuspenseDemo />} />
 					<Route path="book-app" element={<BookApp />} />
 					<Route path="webworker" element={<WebWorker />} />
+					<Route path="book-cleanCode" element={<BookCleanCodeOverview />} />
 				</Route>
 			</Routes>
 		</Router>

@@ -135,3 +135,48 @@ li a:hover {
 .WebWorker ul {
 	padding: 10px;
 }
+
+.Book {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.Book nav {
+	align-self: normal;
+	margin-bottom: 0;
+}
+
+.Book > section {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.Book table tr:hover td {
+	background: var(--color-gray-50);
+	cursor: pointer;
+}
+
+.Book table tr td:last-of-type {
+	text-align: center;
+	width: 20%;
+}
+
+.BookDetails {
+	border: 1px solid var(--color-black);
+	max-width: 30%;
+	padding: 4px;
+}
+
+.BookDetails h1 {
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+}
+
+.BookDetails section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
