@@ -90,5 +90,16 @@ To do so, please follow the steps described [here](CONTRIBUTING.md) - thank you 
 
 ## ❤️🙏 Love & Thanks
 
-- My thanks for the photo displayed on social media goes to: [Desola Lanre-Ologun](https://unsplash.com/de/@disruptxn)
+My thanks for the photo displayed on social media goes to: [Desola Lanre-Ologun](https://unsplash.com/de/@disruptxn)
+
+### Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
