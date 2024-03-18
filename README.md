@@ -97,6 +97,13 @@ My thanks for the photo displayed on social media goes to: [Desola Lanre-Ologun]
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://withnik.com"><img src="https://avatars.githubusercontent.com/u/175385?v=4?s=100" width="100px;" alt="Nik Sumeiko"/><br /><sub><b>Nik Sumeiko</b></sub></a><br /><a href="#mentoring-niksumeiko" title="Mentoring">🧑‍🏫</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
