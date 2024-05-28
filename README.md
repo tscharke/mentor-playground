@@ -72,6 +72,7 @@ pnpm run start
   - [useMemo](./src/hooks/UseMemo.tsx) [`./src/hooks/UseMemo.tsx`](./src/hooks/UseMemo.tsx)
   - [useCallback](./src/hooks/UseCallback.tsx) [`./src/hooks/UseCallback.tsx`](./src/hooks/UseCallback.tsx)
   - [use](./src/hooks/use) [`./src/hooks/use/UseHookOverview.tsx`](./src/hooks/use/UseHookOverview.tsx)
+  - [useSyncExternalStore](./src/hooks/useSyncExternalStore) [`./src/hooks/useSyncExternalStore/UseExternalStoreComponent.tsx`](./src/hooks/useSyncExternalStore/UseExternalStoreComponent.tsx)
 - [Styled Components](./src/style) [`./src/style`](./src/style)
 - [Forms](./src/forms) [`./src/forms`](./src/forms)
 - [Errors](./src/errorHandling) [`./src/errorHandling`](./src/errorHandling)
