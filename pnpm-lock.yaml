@@ -88,6 +88,9 @@ devDependencies:
   alex:
     specifier: ^11.0.1
     version: 11.0.1
+  axios:
+    specifier: ^1.6.7
+    version: 1.6.7
   eslint-config-prettier:
     specifier: ^9.1.0
     version: 9.1.0(eslint@8.56.0)
@@ -2241,6 +2244,16 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
+  /axios@1.6.7:
+    resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
+    dependencies:
+      follow-redirects: 1.15.5
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
   /babel-jest@29.7.0(@babel/core@7.23.9):
     resolution: {integrity: sha512-BrvGY3xZSwEcCzKvKsCi2GgHqDqsYkOP4/by5xCgIwGXQxIEh+8ew3gmrE1y7XRR6LHZIj6yLYnUi/mm2KXKBg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -3604,6 +3617,16 @@ packages:
 
   /flatted@3.2.9:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
+    dev: true
+
+  /follow-redirects@1.15.5:
+    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: true
 
   /for-each@0.3.3:
@@ -6420,6 +6443,10 @@ packages:
 
   /proto-list@1.2.4:
     resolution: {integrity: sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==}
+    dev: true
+
+  /proxy-from-env@1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
     dev: true
 
   /psl@1.9.0:
