@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { use } from 'react';
-import { Task } from '../interfaces';
+import { Task } from '../interfaces.ts';
 
 type UseHookFetchProperties = {
 	waitTime: number;
@@ -34,8 +34,8 @@ const promiseToFetchData = ({ waitTime, data }: PromiseToFetchDataProperties): P
 	});
 };
 
-export const UseHookFetch = (properties: UseHookFetchProperties) => {
-	// Using the Hook with a Promise
+export const UseFetch = (properties: UseHookFetchProperties) => {
+	// Using the API with a Promise
 	const fetchedData = use(promiseToFetchData({ ...properties, data: VALUES_RETURNED_FOR_LOADING }));
 
 	return <code>{JSON.stringify(fetchedData, null, 2)}</code>;

@@ -14,7 +14,6 @@ import {
 	UseRef,
 	UseState,
 } from './index';
-import { UseHookOverview } from './use/UseHookOverview';
 import { UseExternalStoreComponent } from './useSyncExternalStore/UseExternalStoreComponent';
 
 const List = ({ children }: { children: React.ReactNode }) => (
@@ -58,7 +57,6 @@ const TOC = () => {
 				'useContext',
 				{ hash: 'useMemo', title: 'useMemo & useCallback' },
 				'useReducer',
-				'use',
 				'useSyncExternalStore',
 			]}
 		/>
@@ -104,10 +102,6 @@ export const HooksOverview = () => (
 
 				<Element headline="Reducer" id="useReducer">
 					<UseReducerComponent />
-				</Element>
-
-				<Element headline="Use" id="use">
-					<UseHookOverview />
 				</Element>
 
 				<Element headline="External Store" id="useSyncExternalStore">

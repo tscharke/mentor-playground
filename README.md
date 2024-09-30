@@ -17,7 +17,7 @@ There is no generally right or wrong way (apart from "real" mistakes 😉).
 
 ## 🧑‍🎨 Can we see something?
 
-Yes, 😃 there's an executable App (at [Codesandbox](https://githubbox.com/tscharke/mentor-playground)),
+Yes, 😃 there's an executable App (at [Codesandbox](https://stackblitz.com/github/tscharke/mentor-playground?file=README.md)),
 that can also run locally on your machine ([see below](#-setup-on-your-machine)).
 
 **Keep in mind**: The focus is still on the `code` and `tests` and not on a fancy UI/UX with enterprise-relevant features 😉
@@ -71,7 +71,6 @@ pnpm run start
   - [useRef](./src/hooks/UseRefHook.tsx) [`./src/hooks/UseRefHook.tsx`](./src/hooks/UseRefHook.tsx)
   - [useMemo](./src/hooks/UseMemo.tsx) [`./src/hooks/UseMemo.tsx`](./src/hooks/UseMemo.tsx)
   - [useCallback](./src/hooks/UseCallback.tsx) [`./src/hooks/UseCallback.tsx`](./src/hooks/UseCallback.tsx)
-  - [use](./src/hooks/use) [`./src/hooks/use/UseHookOverview.tsx`](./src/hooks/use/UseHookOverview.tsx)
   - [useSyncExternalStore](./src/hooks/useSyncExternalStore) [`./src/hooks/useSyncExternalStore/UseExternalStoreComponent.tsx`](./src/hooks/useSyncExternalStore/UseExternalStoreComponent.tsx)
 - [Styled Components](./src/style) [`./src/style`](./src/style)
 - [Forms](./src/forms) [`./src/forms`](./src/forms)
@@ -83,6 +82,7 @@ pnpm run start
 - [Playgrounds](./src/playgrounds) [`./src/playgrounds`](./src/playgrounds)
   - [Factorial of a number](./src/playgrounds/factorial.test.ts) [`./src/playgrounds/factorial.test.ts`](./src/playgrounds/factorial.test.ts)
   - [Left padding of numbers](./src/playgrounds/leftPadding.test.ts) [`./src/playgrounds/leftPadding.test.ts`](./src/playgrounds/leftPadding.test.ts)
+- [use](src/use) [`./src/use/UseOverview.tsx`](src/use/UseOverview.tsx)
 
 ## 🤝 You would like to contribute?
 

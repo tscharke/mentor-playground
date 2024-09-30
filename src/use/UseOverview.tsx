@@ -1,7 +1,7 @@
 /*
-	Usage of the `use`-Hook
+	Usage of the `use`-API
 
-	In your developer-console you will find this kind of warning then you're using a Promise within the `use`-Hook:
+	In your developer-console you will find this kind of warning then you're using a Promise within the `use`-API:
 
 		Warning: A component was suspended by an uncached promise. Creating promises inside a Client Component or hook is
 		not yet supported, except via a Suspense-compatible library or framework.
@@ -18,16 +18,16 @@
 		- React Server Components (RSC): https://react.dev/blog/2023/03/22/react-labs-what-we-have-been-working-on-march-2023#react-server-components
  */
 import { Suspense, useState } from 'react';
-import { SubTitle } from '../../app/components/Headline';
-import { BackgroundColorContextProvider } from './context/BackgroundColorContextProvider';
-import { UseHookContext } from './context/UseHookContext';
-import { Loader } from './fetch/Loader';
-import { UseHookFetch } from './fetch/UseHookFetch';
-import { Strategy } from './interfaces';
+import { SubTitle } from '../app/components/Headline.tsx';
+import { BackgroundColorContextProvider } from './context/BackgroundColorContextProvider.tsx';
+import { UseContext } from './context/UseContext.tsx';
+import { Loader } from './fetch/Loader.tsx';
+import { UseFetch } from './fetch/UseFetch.tsx';
+import { Strategy } from './interfaces.ts';
 
 const WAIT_TIME = 1_000;
 
-export const UseHookOverview = () => {
+export const UseOverview = () => {
 	const [strategy, setStrategy] = useState<Strategy>('contextChangeable');
 	const changeableMode = strategy === 'contextChangeable';
 
@@ -43,12 +43,12 @@ export const UseHookOverview = () => {
 			<h2>Result:</h2>
 			{strategy === 'fetchData' && (
 				<Suspense fallback={<Loader waitTime={WAIT_TIME} />}>
-					<UseHookFetch waitTime={WAIT_TIME} />
+					<UseFetch waitTime={WAIT_TIME} />
 				</Suspense>
 			)}
 			{strategy !== 'fetchData' && (
 				<BackgroundColorContextProvider>
-					<UseHookContext changeableMode={changeableMode} />
+					<UseContext changeableMode={changeableMode} />
 				</BackgroundColorContextProvider>
 			)}
 		</section>

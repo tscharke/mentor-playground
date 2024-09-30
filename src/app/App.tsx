@@ -7,6 +7,7 @@ import PlaygroundsOverview from '../playgrounds/PlaygroundsOverview';
 import SimpleComponentsOverview from '../simpleComponents';
 import StyledComponentOverview from '../style';
 import { SuspenseDemo } from '../suspense/SuspenseDemo';
+import { UseOverview } from '../use/UseOverview.tsx';
 import { WebWorker } from '../webWorker/WebWorker';
 import { AppOverview } from './AppOverview';
 import { Layout } from './components/Layout';
@@ -27,6 +28,7 @@ export default function App() {
 					<Route path="suspense" element={<SuspenseDemo />} />
 					<Route path="book-app" element={<BookApp />} />
 					<Route path="webworker" element={<WebWorker />} />
+					<Route path="use" element={<UseOverview />} />
 				</Route>
 			</Routes>
 		</Router>
