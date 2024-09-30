@@ -45,10 +45,10 @@ The steps to follow to contribute to this project you can find [here](CONTRIBUTI
 git clone git@github.com:tscharke/mentor-playground.git && cd "$(basename "$_" .git)"
 
 # Install all dependencies
-pnpm install
+yarn install
 
 # Run/Start the development-server
-pnpm run start
+yarn run start
 ```
 
 🤩 After starting the development-server, the application is showing up under [http://localhost:3000](http://localhost:3000).

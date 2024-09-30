@@ -4,7 +4,7 @@ I love pull requests ❤️ from everyone. By participating in this project, you
 your code will be published, copied and reused.
 ️
 
-1. Fork, then clone the repository…
+1. Fork and clone the repository…
 
 ```bash
 git clone git@github.com:your-username/mentor-playground.git
@@ -17,13 +17,13 @@ git clone git@github.com:your-username/mentor-playground.git
 git clone git@github.com:tscharke/mentor-playground.git && cd "$(basename "$_" .git)"
 
 # Install all dependencies
-pnpm install
+yarn install
 ```
 
 3. Make sure all tests pass…
 
 ```bash
-pnpm run test
+yarn run test
 ```
 
 4. Make your changes.

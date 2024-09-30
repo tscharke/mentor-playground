@@ -26,6 +26,7 @@
 	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.25.1",
+		"@testing-library/dom": "^10.4.0",
 		"@testing-library/jest-dom": "^6.5.0",
 		"@testing-library/react": "^16.0.1",
 		"@testing-library/react-hooks": "^8.0.1",
@@ -67,9 +68,9 @@
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"test": "jest",
-		"check:all": "pnpm run check:docs && pnpm run check:code",
+		"check:all": "yarn run check:docs && yarn run check:code",
 		"check:docs": "alex *.md src/**/*.md",
-		"check:code": "pnpm run lint",
+		"check:code": "yarn run lint",
 		"lint": "eslint 'src/**/*.{js*,ts*}'"
 	},
 	"browserslist": [
