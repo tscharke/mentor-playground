@@ -57,15 +57,12 @@
 		"@types/react-dom": "npm:types-react-dom@rc"
 	},
 	"scripts": {
+		"start": "concurrently -k -n API,APP \"yarn start:api\" \"yarn start:server\"",
 		"start:api": "bookmonkey-api",
 		"start:server": "vite",
-		"start": "concurrently -k -n API,APP \"yarn start:api\" \"yarn start:server\"",
 		"build": "tsc && vite build",
-		"preview": "vite preview",
 		"test": "jest",
-		"check:all": "yarn run check:docs && yarn run check:code",
 		"check:docs": "alex *.md src/**/*.md",
-		"check:code": "yarn run lint",
 		"pretty": "biome lint src",
 		"pretty:fix": "biome check --write src"
 	},
