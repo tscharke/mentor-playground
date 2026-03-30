@@ -7,6 +7,7 @@
 		"skipLibCheck": true,
 		"esModuleInterop": true,
 		"moduleResolution": "Node",
+		"ignoreDeprecations": "6.0",
 		"allowImportingTsExtensions": true,
 		"resolveJsonModule": true,
 		"isolatedModules": true,
@@ -17,6 +18,6 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true
 	},
-	"include": ["src"],
+	"include": ["src", "vite-env.d.ts"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }

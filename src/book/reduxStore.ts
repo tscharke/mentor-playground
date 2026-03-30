@@ -1,26 +1,16 @@
-import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
-import { thunk } from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit';
 import booksReducer from './reducer';
 
-declare global {
-	interface Window {
-		__REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-	}
-}
+const createApplicationStore = () =>
+	configureStore({
+		reducer: {
+			book: booksReducer,
+		},
+		devTools: true,
+	});
 
-// Add Redux Dev-Tools
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+export const appStore = createApplicationStore();
 
-const rootReducer = combineReducers({
-	book: booksReducer,
-});
-
-// Create a list of middlewares
-const middleware = [thunk];
-
-// Create own Application Store
-export default function () {
-	const store = createStore(rootReducer, composeEnhancers(applyMiddleware(...middleware)));
-
-	return store;
-}
+export type AppStore = ReturnType<typeof createApplicationStore>;
+export type RootState = ReturnType<AppStore['getState']>;
+export type AppDispatch = AppStore['dispatch'];

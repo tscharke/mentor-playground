@@ -1,5 +1,7 @@
-import { FETCH_BOOK_LIST_ERROR, FETCH_BOOK_LIST_PENDING, FETCH_BOOK_LIST_SUCCESS } from './actions';
-import { Action, Book, BookState } from './interfaces';
+import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import { Book, BookState } from './interfaces';
+
+const BOOKS_URL = 'http://localhost:4730/books';
 
 const INITIAL_STATE: BookState = {
 	loading: false,
@@ -7,41 +9,77 @@ const INITIAL_STATE: BookState = {
 	bookList: [],
 };
 
-export default function (state = INITIAL_STATE, action: Action) {
-	switch (action.type) {
-		case FETCH_BOOK_LIST_PENDING:
-			return {
-				...state,
-				loading: true,
-			};
+export const fetchBookList = createAsyncThunk<ReadonlyArray<Book>, void, { rejectValue: string }>(
+	'book/fetchBookList',
+	async (_, { rejectWithValue }) => {
+		console.log('[Redux] Start fetching books.');
 
-		case FETCH_BOOK_LIST_SUCCESS:
-			console.log('[Reducer] Fetching books was successful. Now update the Redux-Store');
-			return {
-				...state,
-				bookList: action.books,
-				loading: false,
-			};
+		try {
+			console.log('[Redux] Fetching books from the API.');
 
-		case FETCH_BOOK_LIST_ERROR:
-			return {
-				...state,
-				loading: false,
-				error: action.payload,
-			};
+			const response = await fetch(BOOKS_URL);
 
-		case 'DELETE_BOOK':
-			const newBookList = state.bookList.reduce((newBookList: ReadonlyArray<Book>, availableBook: Book) => {
-				const isBookToDelete = availableBook.isbn === action.payload;
+			if (!response.ok) {
+				return rejectWithValue(`Request failed with status ${response.status}`);
+			}
 
-				return isBookToDelete ? newBookList : newBookList.concat(availableBook);
-			}, []);
+			const books = (await response.json()) as ReadonlyArray<Book>;
 
-			return {
-				...state,
-				bookList: newBookList,
-			};
-		default:
-			return state;
-	}
-}
+			console.log('[Redux] Successfully fetched books.');
+			await new Promise((resolve) => {
+				setTimeout(resolve, 3000);
+			});
+
+			return books;
+		} catch (error) {
+			console.log('[Redux] Error while fetching books.', error);
+			return rejectWithValue((error as Error).toString());
+		}
+	},
+);
+
+const bookSlice = createSlice({
+	name: 'book',
+	initialState: INITIAL_STATE,
+	reducers: {
+		deleteBookAction: (state, action: PayloadAction<number>) => {
+			state.bookList = state.bookList.filter((availableBook) => availableBook.isbn !== action.payload);
+		},
+		addBook: {
+			reducer: (state, action: PayloadAction<Book & { createDate: Date; modifyDate: Date; user: { name: string } }>) => {
+				state.bookList = state.bookList.concat(action.payload);
+			},
+			prepare: (book: Book, createTime: Date, userName: string) => ({
+				payload: {
+					...book,
+					createDate: createTime,
+					modifyDate: createTime,
+					user: {
+						name: userName,
+					},
+				},
+			}),
+		},
+		addDummy: (state) => state,
+	},
+	extraReducers: (builder) => {
+		builder
+			.addCase(fetchBookList.pending, (state) => {
+				state.loading = true;
+				state.error = null;
+			})
+			.addCase(fetchBookList.fulfilled, (state, action) => {
+				console.log('[Reducer] Fetching books was successful. Now update the Redux-Store');
+				state.bookList = [...action.payload];
+				state.loading = false;
+			})
+			.addCase(fetchBookList.rejected, (state, action) => {
+				state.loading = false;
+				state.error = action.payload ?? action.error.message ?? 'Unknown error';
+			});
+	},
+});
+
+export const { addBook, addDummy: createAddDummyAction, deleteBookAction } = bookSlice.actions;
+
+export default bookSlice.reducer;

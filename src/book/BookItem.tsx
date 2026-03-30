@@ -4,7 +4,7 @@ interface Properties {
 	book: Book;
 }
 
-const BookItem = ({ book: { isbn, title } }: Properties): JSX.Element => {
+const BookItem = ({ book: { isbn, title } }: Properties) => {
 	return (
 		<div>
 			<div>ISBN: {isbn}</div>

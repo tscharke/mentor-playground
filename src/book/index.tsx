@@ -1,10 +1,7 @@
 import { Provider } from 'react-redux';
 import BookList from './BookList';
-import createApplicationStore from './reduxStore';
+import { appStore } from './reduxStore';
 import '../app/styles.css';
-
-// Redux Store
-const appStore = createApplicationStore();
 
 export default function BookWithReduxProvider() {
 	return (

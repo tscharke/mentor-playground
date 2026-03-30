@@ -1,22 +1,17 @@
 import { useEffect } from 'react';
-import { connect } from 'react-redux';
 import { deleteBookAction, fetchBookList } from './actions';
 import BookItem from './BookItem';
-import { ApplicationState, Book } from './interfaces';
+import { Book } from './interfaces';
+import { useAppDispatch, useAppSelector } from './hooks';
 import Spinner from './Spinner';
 
-interface Properties {
-	bookList: ReadonlyArray<Book>;
-	loading: boolean;
-	error: string | null;
-	fetchBookList: () => void;
-	deleteBookAction: (isbn: number) => void;
-}
+const BookList = () => {
+	const dispatch = useAppDispatch();
+	const { bookList, loading, error } = useAppSelector((state) => state.book);
 
-const BookList = ({ bookList, fetchBookList, loading, deleteBookAction, error }: Properties) => {
 	useEffect(() => {
-		fetchBookList();
-	}, []);
+		void dispatch(fetchBookList());
+	}, [dispatch]);
 
 	if (error) {
 		return (
@@ -37,7 +32,7 @@ const BookList = ({ bookList, fetchBookList, loading, deleteBookAction, error }:
 							<BookItem book={book} />
 							<button
 								onClick={() => {
-									deleteBookAction(book.isbn);
+									dispatch(deleteBookAction(book.isbn));
 								}}
 							>
 								Delete
@@ -51,17 +46,4 @@ const BookList = ({ bookList, fetchBookList, loading, deleteBookAction, error }:
 	);
 };
 
-const mapStateToProps = (state: ApplicationState) => ({
-	bookList: state.book.bookList,
-	loading: state.book.loading,
-	error: state.book.error,
-});
-
-const mapDispatchToProps = {
-	deleteBookAction,
-	fetchBookList,
-};
-
-const ConnectedBookList = connect(mapStateToProps, mapDispatchToProps)(BookList);
-
-export default ConnectedBookList;
+export default BookList;

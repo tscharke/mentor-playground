@@ -47,11 +47,19 @@ git clone git@github.com:tscharke/mentor-playground.git && cd "$(basename "$_" .
 # Install all dependencies
 yarn install
 
+# Start the BookMonkey API in a separate terminal
+yarn run start:api
+
 # Run/Start the development-server
+yarn run start:server
+
+# Optional: start API and frontend together
 yarn run start
 ```
 
 🤩 After starting the development-server, the application is showing up under [http://localhost:3000](http://localhost:3000).
+
+The BookMonkey API is installed locally via `package.json` and starts on [http://localhost:4730](http://localhost:4730).
 
 ## 👀 What to find
 

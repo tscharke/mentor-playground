@@ -27,7 +27,7 @@ type UserListProperties = {
 	users: ReadonlyArray<IUser>;
 };
 
-export const UserList = ({ users }: UserListProperties): JSX.Element => {
+export const UserList = ({ users }: UserListProperties) => {
 	return (
 		<>
 			{users.map((user) => {

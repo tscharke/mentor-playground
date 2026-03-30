@@ -11,7 +11,7 @@ describe('TypeScript & React Test-Suite', () => {
 		const result = deleteBookAction(isbn);
 
 		expect(result).toEqual({
-			type: 'DELETE_BOOK',
+			type: deleteBookAction.type,
 			payload: 4711,
 		});
 	});
@@ -22,7 +22,8 @@ describe('TypeScript & React Test-Suite', () => {
 		const result = deleteBookAction(isbn as number);
 
 		expect(result).toEqual({
-			type: 'DELETE_BOOK',
+			type: deleteBookAction.type,
+			payload: undefined,
 		});
 	});
 });

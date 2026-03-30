@@ -7,7 +7,7 @@ type Person = {
 	lastName: string;
 };
 
-const PersonComp = ({ person: { firstName, lastName } }: Properties): JSX.Element => {
+const PersonComp = ({ person: { firstName, lastName } }: Properties) => {
 	const name = `${firstName.toUpperCase()} ${lastName.toUpperCase()}`;
 
 	return <div>Name of the person is: {name}</div>;
