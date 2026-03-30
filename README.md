@@ -87,9 +87,7 @@ The BookMonkey API is installed locally via `package.json` and starts on [http:/
 - [BookMonkey API](./src/book) [`./src/book`](./src/book)
 - [Web Worker](./src/webWorker/README.md) [`./src/webWorker`](./src/webWorker)
 - [Iterators & Generators](./src/basics/README.md) [`./src/basics`](./src/basics)
-- [Playgrounds](./src/playgrounds) [`./src/playgrounds`](./src/playgrounds)
-  - [Factorial of a number](./src/playgrounds/factorial.test.ts) [`./src/playgrounds/factorial.test.ts`](./src/playgrounds/factorial.test.ts)
-  - [Left padding of numbers](./src/playgrounds/leftPadding.test.ts) [`./src/playgrounds/leftPadding.test.ts`](./src/playgrounds/leftPadding.test.ts)
+- [Playgrounds](./src/playgrounds/README.md) [`./src/playgrounds`](./src/playgrounds)
 - [use](src/use) [`./src/use/UseOverview.tsx`](src/use/UseOverview.tsx)
 
 ## 🤝 You would like to contribute?
