@@ -38,6 +38,12 @@ Most snippets are intended to be executed in the browser and inspected via the c
     Validates numeric left-padding logic across positive/negative integers, floats, and signed zero.
   - [invert tree](./invertTree.test.ts)
     Implements and verifies recursive inversion of a binary tree while omitting undefined child keys.
+  - [decorators](./decorator.test.ts)
+    A test demonstrates the TC39 Stage 3 decorator model (no `experimentalDecorators`) with class, property and method
+    decorators.<br/>
+    Shows the execution timing of each decorator type: class and method decorators run at class definition time,
+    while the property decorator's returned initializer runs at instantiation time.<br/>
+    Parameter decorators are not part of the Stage 3 standard and therefore not covered.
 
 ## 📚 Further readings
 
@@ -45,3 +51,4 @@ Most snippets are intended to be executed in the browser and inspected via the c
 - [MDN: Array.prototype.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 - [MDN: Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [TypeScript Handbook: Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+- [MDN: Decorators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Decorators)
